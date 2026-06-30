@@ -12,10 +12,10 @@ import { absoluteUrl } from "@/lib/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Samskara Nutrition — Functional Nutrition for Women's Gut Health" },
+      { title: "Samskara Nutrition — Functional Nutrition for Gut Health & Wellbeing" },
       { name: "description", content: "Supporting gut healing, digestive balance, and lasting vitality through nourishment rather than restriction." },
-      { property: "og:title", content: "Samskara Nutrition — Functional Nutrition for Women" },
-      { property: "og:description", content: "Functional nutrition rooted in food wisdom — for gut health and women's wellbeing." },
+      { property: "og:title", content: "Samskara Nutrition — Functional Nutrition for Gut Health" },
+      { property: "og:description", content: "Functional nutrition rooted in food wisdom — for gut health and lasting wellbeing." },
       { property: "og:url", content: absoluteUrl("/") },
       { property: "og:image", content: absoluteUrl(photos.portrait.src) },
     ],

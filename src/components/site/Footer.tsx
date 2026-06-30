@@ -1,6 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { BrandWordmark } from "@/components/site/BrandWordmark";
+import { GoogleMap } from "@/components/site/GoogleMap";
+import { BUSINESS_ADDRESS } from "@/lib/brand";
 
 export function Footer() {
   const { t } = useTranslation();
@@ -58,8 +60,16 @@ export function Footer() {
               hello@samskaranutrition.com
             </a>
             <p className="site-footer-note">{t("footer.onlineNote")}</p>
+
+            <div className="site-footer-clinic">
+              <p className="site-footer-label">{t("footer.clinicHeading")}</p>
+              <p className="site-footer-clinic-address">{BUSINESS_ADDRESS}</p>
+              <p className="site-footer-clinic-hint">{t("footer.clinicHint")}</p>
+              <GoogleMap footer className="site-footer-clinic-map" />
+            </div>
           </div>
         </div>
+
         <p className="site-footer-disclaimer">{t("legal.disclaimer")}</p>
       </div>
 

@@ -13,6 +13,7 @@ import "../styles.css";
 import appCss from "../styles.css?url";
 import i18n, { normalizeLang } from "../lib/i18n";
 import { absoluteUrl, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "../lib/site";
+import { BUSINESS_ADDRESS, GOOGLE_MAPS_URL } from "../lib/brand";
 import { photos } from "../lib/photos";
 
 function stylesheetHref(): string {
@@ -68,24 +69,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Samskara Nutrition — Functional Nutrition for Women's Gut Health" },
+      { title: "Samskara Nutrition — Functional Nutrition for Gut Health & Wellbeing" },
       { name: "description", content: SITE_DESCRIPTION },
       { name: "author", content: "Samantha · Samskara Nutrition" },
       { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { name: "googlebot", content: "index, follow" },
-      { name: "theme-color", content: "#2f4a3e" },
+      { name: "theme-color", content: "#6B8F71" },
       { name: "format-detection", content: "telephone=no" },
       { property: "og:site_name", content: SITE_NAME },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_GB" },
       { property: "og:url", content: SITE_URL },
       { property: "og:title", content: SITE_NAME },
-      { property: "og:description", content: "Functional nutrition rooted in food wisdom — for gut health and women's wellbeing." },
+      { property: "og:description", content: SITE_DESCRIPTION },
       { property: "og:image", content: absoluteUrl(photos.portrait.src) },
       { property: "og:image:alt", content: "Samantha, founder of Samskara Nutrition" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: SITE_NAME },
-      { name: "twitter:description", content: "Functional nutrition rooted in food wisdom — for gut health and women's wellbeing." },
+      { name: "twitter:description", content: SITE_DESCRIPTION },
       { name: "twitter:image", content: absoluteUrl(photos.portrait.src) },
     ],
     links: [
@@ -114,6 +115,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           image: absoluteUrl(photos.portrait.src),
           areaServed: ["United Kingdom", "Europe"],
           email: "hello@samskaranutrition.com",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "34a Thomas Rd",
+            addressLocality: "London",
+            postalCode: "E14 7YX",
+            addressCountry: "GB",
+          },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: 51.5129,
+            longitude: -0.0234,
+          },
+          hasMap: GOOGLE_MAPS_URL,
+          sameAs: [GOOGLE_MAPS_URL],
           founder: {
             "@type": "Person",
             name: "Samantha",

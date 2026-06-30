@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { SiteLayout } from "@/components/site/Layout";
 import { CalendlyEmbed } from "@/components/site/CalendlyEmbed";
+import { GoogleMap } from "@/components/site/GoogleMap";
 import { useReveal } from "@/hooks/useReveal";
 import { absoluteUrl } from "@/lib/site";
 
@@ -39,6 +40,7 @@ function ContactPage() {
     or: string;
     bookLink: string;
   };
+  const loc = t("clinic.visitHeading");
   const heroRef = useReveal<HTMLDivElement>();
 
   return (
@@ -63,6 +65,13 @@ function ContactPage() {
           <div className="mt-10">
             <CalendlyEmbed />
           </div>
+        </div>
+      </section>
+
+      <section className="bg-[color:var(--color-cream-deep)]">
+        <div className="mx-auto max-w-5xl px-6 py-16 lg:px-10 lg:py-20">
+          <p className="eyebrow text-center">{loc}</p>
+          <GoogleMap className="mt-8" />
         </div>
       </section>
 

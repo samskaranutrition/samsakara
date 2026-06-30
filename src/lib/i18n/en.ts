@@ -10,13 +10,22 @@ type StoryChapter = {
   num: string;
   title: string;
   body: string;
-  image?: "mediterranean" | "kerala" | "cooking" | "food" | "spices" | "garden" | "portrait";
   pull?: boolean;
 };
 
 export type Translations = {
   nav: { home: string; about: string; programmes: string; work: string; contact: string; cta: string; menu: string; close: string; language: string };
-  footer: { tagline: string; serving: string; explore: string; contactLabel: string; onlineNote: string; copyright: string };
+  footer: {
+    tagline: string;
+    serving: string;
+    explore: string;
+    contactLabel: string;
+    onlineNote: string;
+    copyright: string;
+    clinicHeading: string;
+    clinicHint: string;
+    clinicDirections: string;
+  };
   closing: { eyebrow: string; title: string; body: string; cta: string };
   home: {
     eyebrow: string; title: string; body: string; explore: string; quote: string;
@@ -27,11 +36,8 @@ export type Translations = {
   };
   about: {
     eyebrow: string; title: string; location: string; intro: string;
-    storyEyebrow: string; storyTitle: string; scrollHint: string;
-    imageCaptions: Record<
-      "portrait" | "mediterranean" | "cooking" | "spices" | "kerala" | "food" | "garden",
-      string
-    >;
+    storyEyebrow: string; storyTitle: string;
+    imageCaptions: Record<"portrait", string>;
     chapters: StoryChapter[];
   };
   programmes: { eyebrow: string; title: string; intro: string; cta: string; items: ProgFull[] };
@@ -52,6 +58,16 @@ export type Translations = {
     privacyConsentSuffix: string;
   };
   legal: LegalTranslations;
+  clinic: { mapTitle: string; directions: string; visitHeading: string };
+  payments: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    calendlyNote: string;
+    bookCta: string;
+    payCta: string;
+    secureNote: string;
+  };
 };
 
 export const en: Translations = {
@@ -67,12 +83,15 @@ export const en: Translations = {
     language: "Language",
   },
   footer: {
-    tagline: "Functional nutrition rooted in food wisdom — for gut health and women's wellbeing.",
-    serving: "Working with women across the UK and Europe, online.",
+    tagline: "Functional nutrition rooted in food wisdom — for gut health and lasting wellbeing.",
+    serving: "Working with clients across the UK and Europe, online and in London.",
     explore: "Explore",
     contactLabel: "Contact",
-    onlineNote: "Online across the UK & Europe",
+    onlineNote: "Online across the UK & Europe · London clinic",
     copyright: "© 2026 Samskara Nutrition · Made with care",
+    clinicHeading: "Our London clinic",
+    clinicHint: "In-person consultations by appointment",
+    clinicDirections: "Open in Google Maps",
   },
   closing: {
     eyebrow: "A first conversation",
@@ -87,7 +106,7 @@ export const en: Translations = {
     explore: "Choose Your Journey",
     quote: "Healing doesn't have to begin with restriction. It can begin with nourishment.",
     approachEyebrow: "Approach",
-    approachTitle: "Choose food that love you back",
+    approachTitle: "Choose food that loves you back",
     pillars: [
       { title: "Rooted in real food", body: "No restrictive plans or supplements. Just deeply nourishing food rooted in Indian and Mediterranean traditions." },
       { title: "Gut Focussed", body: "We begin with the gut — gently rebuilding the foundations of digestion, so energy, clarity and balance can follow." },
@@ -101,9 +120,9 @@ export const en: Translations = {
     seeAll: "See all programmes",
     learnMore: "Learn more",
     programmes: [
-      { name: "Samskara - My Signature Journey", tag: "10-week transformation", body: "A deeper, more personal path to lasting change. Comprehensive support over ten weeks for those ready to truly transform how they feel." },
-      { name: "Clarity - The Bridge - Lasting Impressions", tag: "Clarity", body: "A focused first step for those seeking clarity, guidance, and a deeper understanding of what their body needs — without committing to a longer journey just yet." },
-      { name: "Setu", tag: "The bridge", body: "Structured, hands-on support to help you build on your initial plan, restore balance, and bridge the gap between insight and lasting progress." },
+      { name: "Samskara — My Signature Journey", tag: "Signature · 10 weeks", body: "A deeper, more personal path to lasting change. Comprehensive support over ten weeks for those ready to truly transform how they feel." },
+      { name: "Clarity — Lasting Impressions", tag: "Your first step", body: "A focused first step for those seeking clarity, guidance, and a deeper understanding of what their body needs — without committing to a longer journey just yet." },
+      { name: "Setu — The Bridge", tag: "The bridge", body: "Structured, hands-on support to help you build on your initial plan, restore balance, and bridge the gap between insight and lasting progress." },
     ],
     portraitAlt: "Portrait of Samantha, founder of Samskara Nutrition",
   },
@@ -114,28 +133,19 @@ export const en: Translations = {
     intro: "My journey into nutrition began long before Samskara — in Mediterranean kitchens, medical school, a decade in luxury, and the quiet wisdom of Kerala.",
     storyEyebrow: "The story",
     storyTitle: "From Sunday lunches to slow Kerala afternoons",
-    scrollHint: "Scroll to walk through the journey →",
     imageCaptions: {
       portrait: "Samantha — founder of Samskara Nutrition",
-      mediterranean: "A Mediterranean table — bread, tomatoes, olive oil and wine among the olive trees",
-      cooking: "Traditional Kerala kitchen — appam on the griddle, stew simmering on the clay stove",
-      spices: "Whole spices and roots — turmeric, pepper, ginger and dried chillies in wooden bowls",
-      kerala: "Kerala backwaters — a thatched houseboat on still morning water",
-      food: "A banana-leaf thali — sambar, chutneys and small katoris of home cooking",
-      garden: "Sunlight through a tropical garden path in Kerala",
     },
     chapters: [
       {
         num: "01",
         title: "Food was never just food",
         body: "I grew up in a Mediterranean French family where long Sunday lunches stretched into the afternoon — laughter around a table, something slow-cooked, the feeling that being fed meant being loved. Food, for us, was a language.",
-        image: "mediterranean",
       },
       {
         num: "02",
         title: "Understanding the body",
         body: "Drawn to what the body carries and remembers, I studied medicine. A few years later I moved to London and stepped into luxury — a decade at Louis Vuitton, inside a world of extraordinary beauty and relentless pace.",
-        image: "cooking",
       },
       {
         num: "",
@@ -147,13 +157,11 @@ export const en: Translations = {
         num: "03",
         title: "Running on empty",
         body: "Somewhere between the sparkle and the pace, I began to notice how much people gave to their work — and how little they gave to themselves. People looking for purpose, feeling everything but well. That gap stayed with me.",
-        image: "spices",
       },
       {
         num: "04",
         title: "Kerala changed everything",
         body: "Slow afternoons, birdsong, sunlight through the trees. Through the cooking and quiet wisdom of my mother-in-law, I began to understand an ancient way of living and eating that the modern world had largely forgotten.",
-        image: "kerala",
       },
       {
         num: "",
@@ -165,13 +173,11 @@ export const en: Translations = {
         num: "05",
         title: "An unspoken language",
         body: "It is a conversation between you and your body — and when you learn to listen, everything changes. That knowledge, woven with medicine and functional nutrition, became the foundation of Samskara.",
-        image: "food",
       },
       {
         num: "06",
         title: "Today",
         body: "I work with people ready to stop overriding their body and start truly nourishing it. If that sounds like you, you're in the right place.",
-        image: "garden",
       },
     ],
   },
@@ -182,18 +188,18 @@ export const en: Translations = {
     cta: "Book a Free Discovery Call",
     items: [
       {
-        name: "Samskara - My Signature Journey", tag: "Most loved · 10-week transformation",
+        name: "Samskara — My Signature Journey", tag: "Signature · 10 weeks",
         intro: "A deeper, more personal path to lasting change. Comprehensive support over ten weeks for those ready to truly transform how they feel.",
         includes: ["Full functional assessment", "A bespoke 10-week roadmap", "Regular 1:1 sessions", "Personalised meal & lifestyle guidance", "Continuous support between sessions"],
       },
       {
-        name: "Clarity - The Bridge - Lasting Impressions", tag: "Clarity · The bridge",
+        name: "Clarity — Lasting Impressions", tag: "Clarity",
         intro: "A focused first step for those seeking clarity, guidance, and a deeper understanding of what their body needs — without committing to a longer journey just yet.",
         includes: ["In-depth initial consultation", "Personalised first steps", "A clear, calm sense of direction"],
       },
       {
-        name: "Setu", tag: "The bridge",
-        intro: "Structured, hands-on support to help you build on your initial plan, restore balance, and bridge the gap between insight and lasting progress.",
+        name: "Setu — The Bridge", tag: "The bridge",
+        intro: "Setu means bridge — structured, hands-on support to build on your initial plan, restore balance, and move from insight to lasting progress.",
         includes: ["Comprehensive assessment", "Tailored nutrition guidance", "Ongoing check-ins & adjustments", "Recipes drawn from real food traditions"],
       },
     ],
@@ -240,4 +246,18 @@ export const en: Translations = {
     privacyConsentSuffix: " and consent to Samskara Nutrition storing my email.",
   },
   legal: legalEn,
+  clinic: {
+    mapTitle: "Map showing Samskara Nutrition at 34a Thomas Rd, London",
+    directions: "Open in Google Maps",
+    visitHeading: "Visit us in London",
+  },
+  payments: {
+    eyebrow: "Booking & payment",
+    title: "Reserve your place securely",
+    body: "Discovery calls are free. When you're ready to begin a programme, payment is collected securely at booking — no separate invoices or manual transfers.",
+    calendlyNote: "Timings and availability always come from Calendly, so the site stays up to date automatically.",
+    bookCta: "Book a free discovery call",
+    payCta: "Pay for a programme",
+    secureNote: "Payments processed securely via Stripe through Calendly or your payment link.",
+  },
 } as const;

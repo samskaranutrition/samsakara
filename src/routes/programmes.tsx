@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { SiteLayout } from "@/components/site/Layout";
 import { ClosingCTA } from "@/components/site/ClosingCTA";
 import { ProgrammeIcon, PROGRAMME_ICON_ORDER } from "@/components/site/ProgrammeIcon";
+import { ProgrammePayment } from "@/components/site/ProgrammePayment";
 import { useReveal } from "@/hooks/useReveal";
 import { tap } from "@/lib/haptics";
 import { absoluteUrl } from "@/lib/site";
@@ -11,9 +12,9 @@ export const Route = createFileRoute("/programmes")({
   head: () => ({
     meta: [
       { title: "Programmes — Three Ways to Work Together · Samskara Nutrition" },
-      { name: "description", content: "Artha, Setu and the Samskara Signature Journey — three thoughtfully designed functional nutrition programmes for women." },
+      { name: "description", content: "Samskara Signature Journey, Clarity and Setu — three functional nutrition programmes for gut health and lasting wellbeing." },
       { property: "og:title", content: "Programmes — Samskara Nutrition" },
-      { property: "og:description", content: "Three journeys for women ready to rebuild gut health — from gentle clarity to a full ten-week transformation." },
+      { property: "og:description", content: "Three paths to rebuild gut health — from gentle clarity to a full ten-week transformation." },
       { property: "og:url", content: absoluteUrl("/programmes") },
     ],
     links: [{ rel: "canonical", href: absoluteUrl("/programmes") }],
@@ -41,7 +42,7 @@ function ProgrammesPage() {
         <div className="mx-auto max-w-6xl px-6 pb-24 lg:px-10">
           <div ref={gridRef} className="reveal grid gap-10 md:grid-cols-3">
             {p.items.map((it: any, i: number) => {
-              const featured = i === 1;
+              const featured = i === 0;
               const iconVariant = PROGRAMME_ICON_ORDER[i] ?? "signature";
               return (
                 <article
@@ -51,7 +52,7 @@ function ProgrammesPage() {
                     "relative overflow-hidden transition-transform duration-300 hover:-translate-y-1 " +
                     (featured
                       ? "md:order-2 md:-mt-6 bg-[color:var(--color-cream-deep)] p-8 md:p-12 shadow-[0_20px_60px_-30px_rgba(44,74,59,0.35)]"
-                      : (i === 0 ? "md:order-1" : "md:order-3") +
+                      : (i === 1 ? "md:order-1" : "md:order-3") +
                         " bg-background p-8 border border-[color:var(--color-gold)]/40 md:p-12")
                   }
                 >
@@ -84,6 +85,8 @@ function ProgrammesPage() {
           </div>
         </div>
       </section>
+
+      <ProgrammePayment />
 
       <ClosingCTA />
     </SiteLayout>

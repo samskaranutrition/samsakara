@@ -95,7 +95,7 @@ export function Header() {
       >
         <div className="mobile-menu-grid" aria-hidden />
         <div className="mobile-menu-bar">
-          <BrandWordmark markSize={36} tone="light" />
+          <BrandWordmark markSize={36} tone="dark" markTone="gold" />
           <button
             type="button"
             className="menu-btn is-active"

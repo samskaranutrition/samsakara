@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { SiteLayout } from "@/components/site/Layout";
 import { CalendlyEmbed } from "@/components/site/CalendlyEmbed";
+import { ProgrammePayment } from "@/components/site/ProgrammePayment";
 import { useReveal } from "@/hooks/useReveal";
 import { absoluteUrl } from "@/lib/site";
 
@@ -67,6 +68,8 @@ function WorkWithMePage() {
           </p>
         </div>
       </section>
+
+      <ProgrammePayment />
     </SiteLayout>
   );
 }
