@@ -36,7 +36,7 @@ export type Translations = {
   };
   about: {
     eyebrow: string; title: string; location: string; intro: string;
-    storyEyebrow: string; storyTitle: string;
+    storyEyebrow: string; storyTitle: string; scrollHint: string;
     imageCaptions: Record<"portrait", string>;
     chapters: StoryChapter[];
   };
@@ -133,6 +133,7 @@ export const en: Translations = {
     intro: "My journey into nutrition began long before Samskara — in Mediterranean kitchens, medical school, a decade in luxury, and the quiet wisdom of Kerala.",
     storyEyebrow: "The story",
     storyTitle: "From Sunday lunches to slow Kerala afternoons",
+    scrollHint: "Scroll to walk through the journey →",
     imageCaptions: {
       portrait: "Samantha — founder of Samskara Nutrition",
     },

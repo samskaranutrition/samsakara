@@ -93,7 +93,6 @@ export function Header() {
         aria-modal="true"
         aria-label={t("nav.menu")}
       >
-        <div className="mobile-menu-grid" aria-hidden />
         <div className="mobile-menu-bar">
           <BrandWordmark markSize={36} tone="dark" markTone="gold" />
           <button
@@ -129,6 +128,25 @@ export function Header() {
               </span>
             </Link>
           ))}
+          <div
+            className="mobile-menu-row mobile-menu-row--utility"
+            style={{ ["--stagger" as string]: `${60 + nav.length * 40}ms` }}
+          >
+            <span className="mobile-menu-index">{String(nav.length + 1).padStart(2, "0")}</span>
+            <span className="mobile-menu-label mobile-menu-label--util">{t("nav.language")}</span>
+            <LangToggle onDark compact />
+          </div>
+          <a
+            href="mailto:hello@samskaranutrition.com"
+            className="mobile-menu-row mobile-menu-row--email"
+            style={{ ["--stagger" as string]: `${60 + (nav.length + 1) * 40}ms` }}
+          >
+            <span className="mobile-menu-index">{String(nav.length + 2).padStart(2, "0")}</span>
+            <span className="mobile-menu-label mobile-menu-label--email">hello@samskaranutrition.com</span>
+            <span className="mobile-menu-arrow" aria-hidden>
+              →
+            </span>
+          </a>
         </nav>
 
         <div className="mobile-menu-cta-wrap">
@@ -141,20 +159,13 @@ export function Header() {
               tap(8);
             }}
             className="mobile-menu-cta"
-            style={{ ["--stagger" as string]: `${60 + nav.length * 40}ms` }}
+            style={{ ["--stagger" as string]: `${60 + (nav.length + 2) * 40}ms` }}
           >
             <span className="mobile-menu-cta-label">{t("nav.cta")}</span>
             <span className="mobile-menu-arrow" aria-hidden>
               →
             </span>
           </Link>
-        </div>
-
-        <div className="mobile-menu-footer">
-          <LangToggle onDark compact />
-          <a href="mailto:hello@samskaranutrition.com" className="mobile-menu-email">
-            hello@samskaranutrition.com
-          </a>
         </div>
       </div>
     ) : null;
@@ -220,7 +231,7 @@ export function Header() {
           </div>
 
           <div className="header-mobile-actions">
-            <LangToggle compact />
+            {!open && <LangToggle compact />}
             <button
               type="button"
               className={"menu-btn" + (open ? " is-active" : "")}

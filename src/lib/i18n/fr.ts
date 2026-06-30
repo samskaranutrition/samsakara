@@ -64,6 +64,7 @@ export const fr: Translations = {
     intro: "Mon chemin vers la nutrition a commencé bien avant Samskara — dans les cuisines méditerranéennes, la médecine, une décennie dans le luxe, et la sagesse tranquille du Kerala.",
     storyEyebrow: "Le récit",
     storyTitle: "Des déjeuners du dimanche aux après-midis lents du Kerala",
+    scrollHint: "Faites défiler pour parcourir le chemin →",
     imageCaptions: {
       portrait: "Samantha — fondatrice de Samskara Nutrition",
     },
