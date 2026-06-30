@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
-import { SiteLayout } from "@/components/site/Layout";
+import { AboutSamskaraMeaning, DiscoveryCallCTA, MailingListBlock } from "@/components/site/AboutSections";
 import { AboutStory } from "@/components/site/AboutStory";
-import { ClosingCTA } from "@/components/site/ClosingCTA";
+import { SiteLayout } from "@/components/site/Layout";
 import { BlurImage } from "@/components/site/BlurImage";
 import { useReveal } from "@/hooks/useReveal";
 import { photos } from "@/lib/photos";
@@ -28,7 +28,6 @@ function AboutPage() {
   const about = t("about", { returnObjects: true }) as {
     eyebrow: string;
     title: string;
-    location: string;
     intro: string;
   };
   const heroRef = useReveal<HTMLDivElement>();
@@ -45,9 +44,6 @@ function AboutPage() {
             <h1 className="mt-4 font-serif text-4xl leading-tight text-[color:var(--color-forest)] sm:text-5xl lg:text-[3.25rem]">
               {about.title}
             </h1>
-            <p className="mt-3 text-sm uppercase tracking-[0.22em] text-[color:var(--color-terracotta)]">
-              {about.location}
-            </p>
             <p className="text-body mt-6 max-w-xl text-lg">{about.intro}</p>
           </div>
           <div className="order-1 lg:order-2 lg:col-span-5">
@@ -69,7 +65,9 @@ function AboutPage() {
 
       <AboutStory />
 
-      <ClosingCTA />
+      <AboutSamskaraMeaning />
+      <MailingListBlock />
+      <DiscoveryCallCTA />
     </SiteLayout>
   );
 }

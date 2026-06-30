@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useRouter } from "@tanstack/react-router";
 
-const PREFETCH_ROUTES = ["/about", "/programmes", "/work-with-me", "/contact"] as const;
+const PREFETCH_ROUTES = ["/about", "/programmes", "/work-with-me", "/contact", "/faq"] as const;
 
 /** Warm route chunks after first paint so nav feels instant. */
 export function RoutePrefetcher() {

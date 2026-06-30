@@ -1,4 +1,5 @@
 import type { Translations } from "./en";
+import { faqFr } from "./faq-fr";
 import { legalFr } from "./legal-fr";
 
 export const fr: Translations = {
@@ -8,6 +9,7 @@ export const fr: Translations = {
     programmes: "Programmes",
     work: "Collaborer",
     contact: "Contact",
+    faq: "FAQ",
     email: "E-mail",
     cta: "Appel découverte gratuit",
     menu: "Menu",
@@ -60,8 +62,7 @@ export const fr: Translations = {
   },
   about: {
     eyebrow: "À propos de moi",
-    title: "Bonjour, je suis Samantha",
-    location: "Kerala · Londres",
+    title: "Je suis Samantha",
     intro: "Mon chemin vers la nutrition a commencé bien avant Samskara — dans les cuisines méditerranéennes, la médecine, une décennie dans le luxe, et la sagesse tranquille du Kerala.",
     storyEyebrow: "Le récit",
     storyTitle: "Des déjeuners du dimanche aux après-midis lents du Kerala",
@@ -98,7 +99,7 @@ export const fr: Translations = {
       },
       {
         num: "",
-        title: "La nourriture n'est pas un carburant. Elle n'est pas l'ennemi.",
+        title: "La nourriture n'a jamais été l'ennemi. C'est ainsi que l'on guérit.",
         body: "",
         pull: true,
       },
@@ -113,6 +114,38 @@ export const fr: Translations = {
         body: "J'accompagne des personnes prêtes à arrêter de forcer leur corps pour commencer à le nourrir vraiment. Si cela vous ressemble, vous êtes au bon endroit.",
       },
     ],
+    samskaraMeaning: {
+      title: "Samskara",
+      partOfSpeech: "[SUM-SKAR-UH] — nom",
+      paragraphs: [
+        "En sanskrit, Samskara évoque le pouvoir discret de l'intention, l'empreinte laissée lorsque nous agissons en pleine conscience.",
+        "Sam — bien considéré, choisi avec réflexion. Kara — l'action que nous posons.",
+        "Samskara est l'impression durable des actions menées avec présence et intention.",
+        "Chaque repas, chaque rituel, chaque choix laisse sa marque en nous. Répétés avec intention, ces choix deviennent des habitudes. Les habitudes deviennent des rythmes. Et avec le temps, ces rythmes façonnent notre façon de penser, de vivre et qui nous devenons.",
+        "C'est le cœur de Samskara, où la chaleur des traditions alimentaires indiennes rencontre la simplicité de la table méditerranéenne, tissées ensemble avec intention. Pour apporter un accompagnement conscient, des choix nourrissants qui créent une transformation durable — non seulement pour la santé intestinale, mais dans la façon dont elles traversent chaque journée.",
+      ],
+      tagline: "Nourrir avec intention.",
+      imageAlt: "Table méditerranéenne — les traditions alimentaires au cœur de Samskara",
+    },
+    mailing: {
+      title: "Chaque choix laisse sa marque.",
+      body: "Choisissez de vous sentir aligné·e dans le parcours Samskara. Rejoignez notre liste de diffusion pour un soutien ancré sur la santé, les rythmes saisonniers et les recettes, ainsi que les actualités de la pratique.",
+      emailLabel: "Votre e-mail",
+      submit: "Rejoindre la liste",
+      submitting: "Inscription…",
+      successTitle: "Vous êtes inscrit·e.",
+      successBody: "Merci — attendez-vous à recevoir un soutien ancré, des rythmes saisonniers et des nouvelles de la pratique.",
+      privacyPrefix: "J'accepte la ",
+      privacyLink: "politique de confidentialité",
+      privacySuffix: " et consens à ce que Samskara Nutrition conserve mon e-mail pour les mises à jour de la liste.",
+      errorBody: "Une erreur s'est produite — écrivez à hello@samskaranutrition.com pour vous inscrire.",
+    },
+    discoveryCta: {
+      eyebrow: "Le premier pas",
+      title: "Réserver un appel découverte gratuit",
+      body: "Une conversation détendue de quinze minutes pour explorer où vous en êtes, ce que vous espérez et si nous sommes faits pour travailler ensemble.",
+      cta: "Réserver un appel découverte gratuit",
+    },
   },
   programmes: {
     eyebrow: "Travailler ensemble",
@@ -140,12 +173,13 @@ export const fr: Translations = {
   work: {
     eyebrow: "Le premier pas",
     title: "Réservez votre appel découverte gratuit",
-    intro: "Une conversation détendue de 20 minutes pour explorer où vous en êtes et ce que vous espérez. Choisissez une date et une heure ci-dessous — vous recevrez une confirmation instantanée par e-mail.",
+    intro: "Une conversation détendue de quinze minutes pour explorer où vous en êtes, ce que vous espérez et si nous sommes faits pour travailler ensemble. Sans pression, juste un espace chaleureux pour être entendu·e.",
     steps: [
       { n: "01", t: "Choisissez un créneau", b: "Sélectionnez un horaire disponible dans le calendrier — affiché dans votre fuseau horaire." },
-      { n: "02", t: "Nous parlons", b: "Vous partagez ce que vous traversez et ce que vous aimeriez voir changer." },
+      { n: "02", t: "Nous parlons", b: "Nous discutons brièvement et explorons votre objectif de santé." },
       { n: "03", t: "Vous décidez", b: "Si cela vous parle, nous parlons des prochaines étapes. Sinon, vous repartez avec de la clarté." },
     ],
+    laptopAlt: "Samantha lors d'une consultation en ligne",
     bookingEyebrow: "Choisissez votre horaire",
     bookingTitle: "Réserver un appel découverte",
     bookingNote: "Les créneaux disponibles sont mis à jour régulièrement. Vous recevrez un e-mail de confirmation avec invitation calendrier et rappels avant l'appel.",
@@ -178,6 +212,7 @@ export const fr: Translations = {
     privacyConsentLink: "politique de confidentialité",
     privacyConsentSuffix: " et consens à ce que Samskara Nutrition conserve mon e-mail.",
   },
+  faq: faqFr,
   legal: legalFr,
   clinic: {
     mapTitle: "Carte — Samskara Nutrition, 34a Thomas Rd, Londres",

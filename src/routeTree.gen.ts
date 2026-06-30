@@ -15,6 +15,7 @@ import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ProgrammesRouteImport } from './routes/programmes'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as FaqRouteImport } from './routes/faq'
 import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
@@ -50,6 +51,11 @@ const PrivacyRoute = PrivacyRouteImport.update({
   path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CookiesRoute = CookiesRouteImport.update({
   id: '/cookies',
   path: '/cookies',
@@ -76,6 +82,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/cookies': typeof CookiesRoute
+  '/faq': typeof FaqRoute
   '/privacy': typeof PrivacyRoute
   '/programmes': typeof ProgrammesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -88,6 +95,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/cookies': typeof CookiesRoute
+  '/faq': typeof FaqRoute
   '/privacy': typeof PrivacyRoute
   '/programmes': typeof ProgrammesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -101,6 +109,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/cookies': typeof CookiesRoute
+  '/faq': typeof FaqRoute
   '/privacy': typeof PrivacyRoute
   '/programmes': typeof ProgrammesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -115,6 +124,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/cookies'
+    | '/faq'
     | '/privacy'
     | '/programmes'
     | '/sitemap.xml'
@@ -127,6 +137,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/cookies'
+    | '/faq'
     | '/privacy'
     | '/programmes'
     | '/sitemap.xml'
@@ -139,6 +150,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/cookies'
+    | '/faq'
     | '/privacy'
     | '/programmes'
     | '/sitemap.xml'
@@ -152,6 +164,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   CookiesRoute: typeof CookiesRoute
+  FaqRoute: typeof FaqRoute
   PrivacyRoute: typeof PrivacyRoute
   ProgrammesRoute: typeof ProgrammesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -204,6 +217,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/cookies': {
       id: '/cookies'
       path: '/cookies'
@@ -240,6 +260,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   CookiesRoute: CookiesRoute,
+  FaqRoute: FaqRoute,
   PrivacyRoute: PrivacyRoute,
   ProgrammesRoute: ProgrammesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,

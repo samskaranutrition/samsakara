@@ -39,6 +39,11 @@
     <link rel="alternate" hreflang="x-default" href="https://samskaranutrition.com/" />
   </head>
   <body>
+    <form name="mailing-list" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="mailing-list" />
+      <input type="email" name="email" />
+      <input type="checkbox" name="consent" value="yes" />
+    </form>
     <div id="root"></div>
   </body>
 </html>

@@ -1,5 +1,7 @@
 /* eslint-disable */
+import { faqEn } from "./faq-en";
 import { legalEn } from "./legal-en";
+import type { FaqTranslations } from "./faq-types";
 import type { LegalTranslations } from "./legal-types";
 
 type Pillar = { title: string; body: string };
@@ -14,7 +16,7 @@ type StoryChapter = {
 };
 
 export type Translations = {
-  nav: { home: string; about: string; programmes: string; work: string; contact: string; email: string; cta: string; menu: string; close: string; language: string };
+  nav: { home: string; about: string; programmes: string; work: string; contact: string; faq: string; email: string; cta: string; menu: string; close: string; language: string };
   footer: {
     tagline: string;
     serving: string;
@@ -35,19 +37,42 @@ export type Translations = {
     programmes: ProgItem[]; portraitAlt: string;
   };
   about: {
-    eyebrow: string; title: string; location: string; intro: string;
+    eyebrow: string; title: string; intro: string;
     storyEyebrow: string; storyTitle: string; scrollHint: string;
     imageCaptions: Record<"portrait", string>;
     chapters: StoryChapter[];
+    samskaraMeaning: {
+      title: string;
+      partOfSpeech: string;
+      paragraphs: string[];
+      tagline: string;
+      imageAlt: string;
+    };
+    mailing: {
+      title: string;
+      body: string;
+      emailLabel: string;
+      submit: string;
+      submitting: string;
+      successTitle: string;
+      successBody: string;
+      privacyPrefix: string;
+      privacyLink: string;
+      privacySuffix: string;
+      errorBody: string;
+    };
+    discoveryCta: { eyebrow: string; title: string; body: string; cta: string };
   };
   programmes: { eyebrow: string; title: string; intro: string; cta: string; items: ProgFull[] };
   work: {
     eyebrow: string; title: string; intro: string; steps: Step[];
+    laptopAlt: string;
     bookingEyebrow: string; bookingTitle: string; bookingNote: string;
     bookingUnavailable: string; bookingUnavailableBody: string; emailSamantha: string;
     altLink: string; altLinkText: string;
     calendlyConsentTitle: string; calendlyConsentBody: string; calendlyEnable: string;
   };
+  faq: FaqTranslations;
   contact: {
     eyebrow: string; title: string; intro: string;
     bookingEyebrow: string; bookingTitle: string; bookingNote: string;
@@ -77,6 +102,7 @@ export const en: Translations = {
     programmes: "Programmes",
     work: "Work With Me",
     contact: "Contact",
+    faq: "FAQ",
     email: "Email",
     cta: "Book a Free Discovery Call",
     menu: "Menu",
@@ -129,8 +155,7 @@ export const en: Translations = {
   },
   about: {
     eyebrow: "About me",
-    title: "Hello, I'm Samantha",
-    location: "Kerala · London",
+    title: "I'm Samantha",
     intro: "My journey into nutrition began long before Samskara — in Mediterranean kitchens, medical school, a decade in luxury, and the quiet wisdom of Kerala.",
     storyEyebrow: "The story",
     storyTitle: "From Sunday lunches to slow Kerala afternoons",
@@ -167,7 +192,7 @@ export const en: Translations = {
       },
       {
         num: "",
-        title: "Food is not fuel. It is not the enemy.",
+        title: "Food was never the enemy. It's how you heal.",
         body: "",
         pull: true,
       },
@@ -179,9 +204,41 @@ export const en: Translations = {
       {
         num: "06",
         title: "Today",
-        body: "I work with people ready to stop overriding their body and start truly nourishing it. If that sounds like you, you're in the right place.",
+        body: "I work with individuals ready to stop overriding their body and start truly nourishing it. If that sounds like you, You are in the right place.",
       },
     ],
+    samskaraMeaning: {
+      title: "Samskara",
+      partOfSpeech: "[SUM-SKAR-UH] — noun",
+      paragraphs: [
+        "From the Sanskrit, Samskara speaks to the quiet power of intention, the imprint left when we act with full awareness.",
+        "Sam — well considered, thoughtfully chosen. Kara — the action we take.",
+        "Samskara is the lasting impression of the actions that are carried out with presence and purpose.",
+        "Every meal, every ritual, every choice leaves its mark on us. Repeated with intention, these choices become habits. Habits become rhythms. And over time, these rhythms shape how we think, how we live, and who we become.",
+        "This is the heart of Samskara, where the warmth of Indian food traditions meets the ease of the Mediterranean table, woven together with intention. To bring guidance with mindfulness, nourishing choices that create lasting transformation, not only for gut health, but in the way they move through each day.",
+      ],
+      tagline: "To nourish with intention.",
+      imageAlt: "Mediterranean table — food traditions at the heart of Samskara",
+    },
+    mailing: {
+      title: "Every choice leaves its mark.",
+      body: "Choose to feel aligned through the Samskara journey. Join our mailing list for grounded support on health, seasonal rhythms and recipes, and updates from the practice.",
+      emailLabel: "Your email",
+      submit: "Join the mailing list",
+      submitting: "Joining…",
+      successTitle: "You're on the list.",
+      successBody: "Thank you — look out for grounded support, seasonal rhythms and updates from the practice.",
+      privacyPrefix: "I agree to the ",
+      privacyLink: "Privacy Policy",
+      privacySuffix: " and consent to Samskara Nutrition storing my email for mailing list updates.",
+      errorBody: "Something went wrong — please email hello@samskaranutrition.com to join.",
+    },
+    discoveryCta: {
+      eyebrow: "The first step",
+      title: "Book a free discovery call",
+      body: "A relaxed, fifteen-minute conversation to explore where you are, what you're hoping for, and whether we're the right fit.",
+      cta: "Book a Free Discovery Call",
+    },
   },
   programmes: {
     eyebrow: "Ways to work together",
@@ -209,12 +266,13 @@ export const en: Translations = {
   work: {
     eyebrow: "The first step",
     title: "Book your free discovery call",
-    intro: "A relaxed, 20-minute conversation to explore where you are, what you're hoping for, and whether we're the right fit. Choose a date and time below — you'll receive an instant confirmation by email.",
+    intro: "A relaxed, fifteen-minute conversation to explore where you are, what you're hoping for, and whether we're the right fit. No pressure, just a warm space to be heard.",
     steps: [
       { n: "01", t: "Pick a time", b: "Select an available slot from the calendar — times shown are in your local timezone." },
-      { n: "02", t: "We talk", b: "You share what's been going on and what you'd love to change." },
+      { n: "02", t: "We talk", b: "We briefly discuss and explore your health goal." },
       { n: "03", t: "You decide", b: "If it feels right, we talk next steps. If not, you leave with clarity." },
     ],
+    laptopAlt: "Samantha during an online consultation",
     bookingEyebrow: "Choose your time",
     bookingTitle: "Book a discovery call",
     bookingNote: "Available slots are kept up to date. You'll get a confirmation email with calendar invite and reminders before your call.",
@@ -247,6 +305,7 @@ export const en: Translations = {
     privacyConsentLink: "Privacy Policy",
     privacyConsentSuffix: " and consent to Samskara Nutrition storing my email.",
   },
+  faq: faqEn,
   legal: legalEn,
   clinic: {
     mapTitle: "Map showing Samskara Nutrition at 34a Thomas Rd, London",

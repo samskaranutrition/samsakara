@@ -33,6 +33,13 @@ export const photos = {
     objectPosition: "55% center",
     captionKey: "cooking",
   },
+  samanthaLaptop: {
+    src: image("cooking.jpg"),
+    placeholder: image("cooking.jpg"),
+    aspect: "16 / 10",
+    objectPosition: "55% center",
+    captionKey: "laptop",
+  },
   spices: {
     src: image("spices.jpg"),
     placeholder: image("spices.jpg"),

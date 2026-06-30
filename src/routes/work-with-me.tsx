@@ -3,14 +3,16 @@ import { useTranslation } from "react-i18next";
 import { SiteLayout } from "@/components/site/Layout";
 import { CalendlyEmbed } from "@/components/site/CalendlyEmbed";
 import { ProgrammePayment } from "@/components/site/ProgrammePayment";
+import { BlurImage } from "@/components/site/BlurImage";
 import { useReveal } from "@/hooks/useReveal";
+import { photos } from "@/lib/photos";
 import { absoluteUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/work-with-me")({
   head: () => ({
     meta: [
       { title: "Book a Free Discovery Call — Samskara Nutrition" },
-      { name: "description", content: "Pick a time that suits you — book a relaxed 20-minute discovery call with Samantha online." },
+      { name: "description", content: "Pick a time that suits you — book a relaxed fifteen-minute discovery call with Samantha online." },
       { property: "og:title", content: "Book a Discovery Call — Samskara Nutrition" },
       { property: "og:description", content: "Choose an available slot and book instantly. You'll receive a confirmation email with the date and time." },
       { property: "og:url", content: absoluteUrl("/work-with-me") },
@@ -29,10 +31,31 @@ function WorkWithMePage() {
   return (
     <SiteLayout>
       <section className="bg-background">
-        <div ref={heroRef} className="reveal mx-auto max-w-4xl px-6 py-24 text-center lg:px-10">
-          <p className="eyebrow">{w.eyebrow}</p>
-          <h1 className="mt-6 font-serif text-5xl leading-tight text-[color:var(--color-forest)] md:text-6xl">{w.title}</h1>
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-[color:var(--color-ink)]/80">{w.intro}</p>
+        <div
+          ref={heroRef}
+          className="reveal mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 sm:px-6 sm:py-20 lg:grid-cols-12 lg:gap-14 lg:px-10 lg:py-24"
+        >
+          <div className="text-center lg:col-span-6 lg:text-left">
+            <p className="eyebrow">{w.eyebrow}</p>
+            <h1 className="mt-6 font-serif text-4xl leading-tight text-[color:var(--color-forest)] sm:text-5xl md:text-6xl">
+              {w.title}
+            </h1>
+            <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-[color:var(--color-ink)]/80 lg:mx-0">
+              {w.intro}
+            </p>
+          </div>
+          <figure className="lg:col-span-6">
+            <div className="work-laptop-photo overflow-hidden border border-[color:var(--color-gold)]/35 bg-[color:var(--color-cream-deep)]">
+              <BlurImage
+                src={photos.samanthaLaptop.src}
+                alt={w.laptopAlt}
+                width={1600}
+                height={1000}
+                loading="eager"
+                objectPosition={photos.samanthaLaptop.objectPosition}
+              />
+            </div>
+          </figure>
         </div>
       </section>
 
@@ -50,7 +73,7 @@ function WorkWithMePage() {
         </div>
       </section>
 
-      <section id="book" className="bg-background scroll-mt-24">
+      <section id="book" className="scroll-mt-24 bg-background">
         <div className="mx-auto max-w-3xl px-6 py-16 lg:px-10 lg:py-24">
           <p className="eyebrow text-center">{w.bookingEyebrow}</p>
           <h2 className="mt-5 text-center font-serif text-4xl text-[color:var(--color-forest)]">{w.bookingTitle}</h2>

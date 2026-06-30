@@ -12,6 +12,7 @@ export function Footer() {
     { to: "/about", label: t("nav.about") },
     { to: "/programmes", label: t("nav.programmes") },
     { to: "/work-with-me", label: t("nav.work") },
+    { to: "/faq", label: t("nav.faq") },
     { to: "/contact", label: t("nav.contact") },
   ] as const;
 
