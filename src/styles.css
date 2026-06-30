@@ -872,21 +872,32 @@
 .mobile-menu-row--utility {
   cursor: default;
 }
-.mobile-menu-label--util {
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-.mobile-menu-label--email {
-  font-family: var(--font-sans);
-  font-size: clamp(0.88rem, 3.5vw, 1rem);
-  letter-spacing: 0.02em;
-  word-break: break-all;
-}
 .mobile-menu-row--utility .lang-pill {
   justify-self: end;
+}
+.mobile-menu-row--email {
+  align-items: center;
+}
+.mobile-menu-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+.mobile-menu-meta-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.65rem, 5vw, 2rem);
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  color: var(--color-gold);
+}
+.mobile-menu-meta-value {
+  font-family: var(--font-sans);
+  font-size: clamp(0.78rem, 3vw, 0.88rem);
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+  color: color-mix(in oklab, var(--color-gold) 82%, transparent);
+  overflow-wrap: anywhere;
 }
 .mobile-menu-row:active { background: color-mix(in oklab, var(--color-gold) 10%, transparent); }
 .mobile-menu-row.is-active {

@@ -8,6 +8,7 @@ export const fr: Translations = {
     programmes: "Programmes",
     work: "Collaborer",
     contact: "Contact",
+    email: "E-mail",
     cta: "Appel découverte gratuit",
     menu: "Menu",
     close: "Fermer",

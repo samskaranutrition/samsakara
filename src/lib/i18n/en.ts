@@ -14,7 +14,7 @@ type StoryChapter = {
 };
 
 export type Translations = {
-  nav: { home: string; about: string; programmes: string; work: string; contact: string; cta: string; menu: string; close: string; language: string };
+  nav: { home: string; about: string; programmes: string; work: string; contact: string; email: string; cta: string; menu: string; close: string; language: string };
   footer: {
     tagline: string;
     serving: string;
@@ -77,6 +77,7 @@ export const en: Translations = {
     programmes: "Programmes",
     work: "Work With Me",
     contact: "Contact",
+    email: "Email",
     cta: "Book a Free Discovery Call",
     menu: "Menu",
     close: "Close",

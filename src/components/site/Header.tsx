@@ -133,7 +133,7 @@ export function Header() {
             style={{ ["--stagger" as string]: `${60 + nav.length * 40}ms` }}
           >
             <span className="mobile-menu-index">{String(nav.length + 1).padStart(2, "0")}</span>
-            <span className="mobile-menu-label mobile-menu-label--util">{t("nav.language")}</span>
+            <span className="mobile-menu-label">{t("nav.language")}</span>
             <LangToggle onDark compact />
           </div>
           <a
@@ -142,7 +142,10 @@ export function Header() {
             style={{ ["--stagger" as string]: `${60 + (nav.length + 1) * 40}ms` }}
           >
             <span className="mobile-menu-index">{String(nav.length + 2).padStart(2, "0")}</span>
-            <span className="mobile-menu-label mobile-menu-label--email">hello@samskaranutrition.com</span>
+            <span className="mobile-menu-meta">
+              <span className="mobile-menu-meta-title">{t("nav.email")}</span>
+              <span className="mobile-menu-meta-value">hello@samskaranutrition.com</span>
+            </span>
             <span className="mobile-menu-arrow" aria-hidden>
               →
             </span>
