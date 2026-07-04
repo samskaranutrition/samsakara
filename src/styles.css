@@ -852,6 +852,7 @@
   display: flex;
   align-items: center;
   min-width: 0;
+  overflow: hidden;
   text-decoration: none;
 }
 .header-nav {
@@ -892,6 +893,7 @@
   align-items: center;
   gap: 0.5rem;
   justify-self: end;
+  flex-shrink: 0;
 }
 @media (min-width: 1280px) {
   .header-mobile-actions {
@@ -935,16 +937,12 @@
   white-space: nowrap;
 }
 
-.brand-wordmark-name--compact {
+/* Header bar: logo only until desktop — room for lang toggle + menu */
+.site-header .brand-wordmark-name--compact {
   display: none;
 }
-@media (min-width: 480px) {
-  .brand-wordmark-name--compact {
-    display: block;
-  }
-}
 @media (min-width: 1280px) {
-  .brand-wordmark-name--compact {
+  .site-header .brand-wordmark-name--compact {
     display: block;
   }
 }

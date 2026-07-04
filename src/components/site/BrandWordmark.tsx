@@ -7,7 +7,7 @@ type Props = {
   tone?: "light" | "dark";
   /** Icon colour on dark backgrounds — defaults to cream */
   markTone?: "forest" | "cream" | "gold";
-  /** Hide wordmark text on narrow viewports (header mobile bar) */
+  /** Hide wordmark text in the fixed header below desktop width */
   compact?: boolean;
   align?: "center" | "start";
   className?: string;
