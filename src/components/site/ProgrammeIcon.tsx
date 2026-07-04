@@ -1,3 +1,6 @@
+import { BrandMark } from "@/components/site/BrandMark";
+import { BridgeGlyph, LotusGlyph } from "@/components/site/ProgrammeGlyphs";
+
 export type ProgrammeIconVariant = "signature" | "clarity" | "bridge";
 
 export type ProgrammeIconTone = "forest" | "terracotta" | "cream" | "gold";
@@ -12,12 +15,6 @@ type Props = {
   className?: string;
 };
 
-const ICON_SRC: Record<ProgrammeIconVariant, string> = {
-  clarity: "/images/icons/artha-lotus.png",
-  bridge: "/images/icons/setu-bridge.png",
-  signature: "/images/icon-base.png",
-};
-
 const TONE_COLOR: Record<ProgrammeIconTone, string> = {
   forest: "var(--color-forest)",
   terracotta: "var(--color-terracotta)",
@@ -25,11 +22,19 @@ const TONE_COLOR: Record<ProgrammeIconTone, string> = {
   gold: "var(--color-gold)",
 };
 
-export function programmeIconTone(_onDark: boolean, _variant: ProgrammeIconVariant): ProgrammeIconTone {
+const BRAND_TONE: Record<ProgrammeIconTone, "forest" | "cream" | "gold" | "terracotta"> = {
+  forest: "forest",
+  terracotta: "terracotta",
+  cream: "cream",
+  gold: "gold",
+};
+
+export function programmeIconTone(onDark: boolean, variant: ProgrammeIconVariant): ProgrammeIconTone {
+  if (onDark && variant === "signature") return "terracotta";
   return "forest";
 }
 
-/** Outlined lotus / bridge / brand mark — sized via parent `.programme-icon-well` */
+/** Artha lotus & Setu bridge as SVG; Samskara uses the brand mark */
 export function ProgrammeIcon({
   variant,
   tone,
@@ -38,7 +43,7 @@ export function ProgrammeIcon({
   className = "",
 }: Props) {
   const resolvedTone = tone ?? programmeIconTone(onDark, variant);
-  const src = ICON_SRC[variant];
+  const color = TONE_COLOR[resolvedTone];
 
   return (
     <span
@@ -50,21 +55,16 @@ export function ProgrammeIcon({
       }
       data-variant={variant}
     >
-      <span
-        aria-hidden="true"
-        className="programme-glyph"
-        style={{
-          backgroundColor: TONE_COLOR[resolvedTone],
-          WebkitMaskImage: `url(${src})`,
-          WebkitMaskSize: "contain",
-          WebkitMaskRepeat: "no-repeat",
-          WebkitMaskPosition: "center",
-          maskImage: `url(${src})`,
-          maskSize: "contain",
-          maskRepeat: "no-repeat",
-          maskPosition: "center",
-        }}
-      />
+      {variant === "signature" ? (
+        <BrandMark
+          tone={BRAND_TONE[resolvedTone]}
+          className="programme-icon-brand"
+        />
+      ) : variant === "bridge" ? (
+        <BridgeGlyph color={color} className="programme-glyph programme-glyph--bridge" />
+      ) : (
+        <LotusGlyph color={color} className="programme-glyph programme-glyph--lotus" />
+      )}
     </span>
   );
 }

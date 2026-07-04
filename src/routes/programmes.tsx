@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { CalendlyEmbed } from "@/components/site/CalendlyEmbed";
 import { BlurImage } from "@/components/site/BlurImage";
@@ -9,6 +9,8 @@ import {
 } from "@/components/site/ProgrammeDetail";
 import { SiteLayout } from "@/components/site/Layout";
 import { useReveal } from "@/hooks/useReveal";
+import { mergeProgrammePrices, useProgrammePrices } from "@/hooks/useProgrammePrices";
+import { tap } from "@/lib/haptics";
 import type { ProgrammesPageContent } from "@/lib/i18n/programmes-types";
 import { photos } from "@/lib/photos";
 import { absoluteUrl } from "@/lib/site";
@@ -22,7 +24,7 @@ export const Route = createFileRoute("/programmes")({
         content: "Artha, Setu and Samskara nutrition programmes with Samantha. Book a complimentary discovery call.",
       },
       { property: "og:title", content: "Programmes | Samskara Nutrition" },
-      { property: "og:image", content: absoluteUrl(photos.approachHero.src) },
+      { property: "og:image", content: absoluteUrl(photos.programmesHero.src) },
       { property: "og:url", content: absoluteUrl("/programmes") },
     ],
     links: [{ rel: "canonical", href: absoluteUrl("/programmes") }],
@@ -34,6 +36,9 @@ function ProgrammesPage() {
   const { t } = useTranslation();
   const p = t("programmesPage", { returnObjects: true }) as ProgrammesPageContent;
   const heroRef = useReveal<HTMLDivElement>();
+  const priceFallback = Object.fromEntries(p.items.map((item) => [item.id, item.price]));
+  const { data: livePrices } = useProgrammePrices(priceFallback);
+  const items = mergeProgrammePrices(p.items, livePrices);
 
   return (
     <SiteLayout>
@@ -50,34 +55,54 @@ function ProgrammesPage() {
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[color:var(--color-ink)] lg:mx-0">
               {p.intro}
             </p>
+            <div className="programme-hero-actions mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+              <Link
+                to="/programmes"
+                hash="overview"
+                preload="intent"
+                onClick={() => tap(6)}
+                className="btn-primary"
+              >
+                {p.labels.overviewTitle} <span className="cta-arrow ml-2">→</span>
+              </Link>
+              <Link
+                to="/programmes"
+                hash="book"
+                preload="intent"
+                onClick={() => tap(8)}
+                className="btn-outline"
+              >
+                {p.discovery.cta}
+              </Link>
+            </div>
           </div>
           <figure className="order-1 lg:order-2 lg:col-span-5">
             <div className="page-photo-frame page-photo-frame--landscape">
               <BlurImage
-                src={photos.approachHero.src}
-                alt="Samantha during a nutrition consultation"
+                src={photos.programmesHero.src}
+                alt="Samantha during an online nutrition consultation"
                 width={1600}
                 height={1280}
                 loading="eager"
                 fetchPriority="high"
                 instant
-                objectPosition={photos.approachHero.objectPosition}
+                objectPosition={photos.programmesHero.objectPosition}
               />
             </div>
           </figure>
         </div>
       </section>
 
-      <ProgrammeOverview items={p.items} labels={p.labels} />
+      <ProgrammeOverview items={items} labels={p.labels} id="overview" />
 
       <section className="programme-detail-stack">
         <div className="mx-auto max-w-4xl px-5 py-12 sm:px-6 lg:px-10 lg:py-16">
-          {p.items.map((item, i) => (
+          {items.map((item, i) => (
             <ProgrammeDetailSection
               key={item.id}
               programme={item}
               labels={p.labels}
-              featured={i === p.items.length - 1}
+              featured={i === items.length - 1}
             />
           ))}
         </div>

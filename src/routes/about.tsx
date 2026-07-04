@@ -11,10 +11,10 @@ import { absoluteUrl } from "@/lib/site";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Samantha — Samskara Nutrition" },
-      { name: "description", content: "From a Mediterranean French upbringing to medicine, luxury, and the food wisdom of Kerala — the story behind Samskara Nutrition." },
-      { property: "og:title", content: "About Samantha — Samskara Nutrition" },
-      { property: "og:description", content: "The founder story of Samskara Nutrition — food as a language between you and your body." },
+      { title: "About Samantha | Samskara Nutrition" },
+      { name: "description", content: "From a Mediterranean French upbringing to medicine, luxury retail, and the food wisdom of Kerala. The story behind Samskara Nutrition." },
+      { property: "og:title", content: "About Samantha | Samskara Nutrition" },
+      { property: "og:description", content: "The founder story of Samskara Nutrition: food as a language between you and your body." },
       { property: "og:url", content: absoluteUrl("/about") },
       { property: "og:image", content: absoluteUrl(photos.homeHero.src) },
     ],

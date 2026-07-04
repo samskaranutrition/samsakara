@@ -3,7 +3,7 @@ import type { ProgrammesPageContent } from "./programmes-types";
 export const programmesEn: ProgrammesPageContent = {
   eyebrow: "Work with me",
   title: "Programmes",
-  intro: "Three paths to understand your body and build lasting change. Begin with a discovery call, or reserve your place directly when you are ready.",
+  intro: "Three paths to understanding your body and building lasting change. Begin with a discovery call, or book directly to start.",
   labels: {
     journeyIncludes: "Your Journey Includes",
     idealIf: "Ideal if…",
@@ -14,7 +14,7 @@ export const programmesEn: ProgrammesPageContent = {
     overviewTitle: "Choose your path",
     bookProgramme: "Reserve & pay",
     viewDetails: "View details",
-    payNote: "Secure booking and payment via Calendly",
+    payNote: "Prices shown are synced from Calendly. Secure booking and payment collected at checkout.",
   },
   items: [
     {
@@ -58,7 +58,7 @@ export const programmesEn: ProgrammesPageContent = {
     {
       id: "setu",
       name: "Setu",
-      subtitle: "Connection",
+      subtitle: "Bridge",
       price: "£185",
       duration: "4 weeks",
       hook: "Bridge the gap between insight and everyday life with guided support.",

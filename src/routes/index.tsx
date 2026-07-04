@@ -12,10 +12,10 @@ import { absoluteUrl } from "@/lib/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Samskara Nutrition — Functional Nutrition for Gut Health & Wellbeing" },
+      { title: "Samskara Nutrition | Functional Nutrition for Gut Health & Wellbeing" },
       { name: "description", content: "Supporting gut healing, digestive balance, and lasting vitality through nourishment rather than restriction." },
-      { property: "og:title", content: "Samskara Nutrition — Functional Nutrition for Gut Health" },
-      { property: "og:description", content: "Functional nutrition rooted in food wisdom — for gut health and lasting wellbeing." },
+      { property: "og:title", content: "Samskara Nutrition | Functional Nutrition for Gut Health" },
+      { property: "og:description", content: "Functional nutrition rooted in food wisdom, for gut health and lasting wellbeing." },
       { property: "og:url", content: absoluteUrl("/") },
       { property: "og:image", content: absoluteUrl(photos.homeHero.src) },
     ],
@@ -96,10 +96,26 @@ function HomePage() {
       </section>
 
       <section className="bg-[color:var(--color-cream-deep)]">
-        <div ref={fnRef} className="reveal mx-auto max-w-3xl px-5 py-16 text-center sm:px-6 sm:py-24 lg:px-10">
-          <p className="eyebrow">{home.fnEyebrow}</p>
-          <h2 className="mt-5 font-serif text-3xl text-[color:var(--color-forest)] sm:text-4xl md:text-5xl">{home.fnTitle}</h2>
-          <p className="mx-auto mt-6 max-w-2xl text-body text-lg sm:text-xl">{home.fnBody}</p>
+        <div ref={fnRef} className="reveal mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-24 lg:px-10">
+          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
+            <div className="lg:col-span-7">
+              <p className="eyebrow">{home.fnEyebrow}</p>
+              <h2 className="mt-5 font-serif text-3xl text-[color:var(--color-forest)] sm:text-4xl md:text-5xl">{home.fnTitle}</h2>
+              <p className="mt-6 max-w-2xl text-body text-lg sm:text-xl">{home.fnBody}</p>
+            </div>
+            <figure className="lg:col-span-5">
+              <div className="page-photo-frame page-photo-frame--landscape">
+                <BlurImage
+                  src={photos.aboutLifestyle.src}
+                  alt="Samantha at home with a warm drink, taking a mindful pause"
+                  width={1600}
+                  height={1280}
+                  loading="lazy"
+                  objectPosition={photos.aboutLifestyle.objectPosition}
+                />
+              </div>
+            </figure>
+          </div>
         </div>
       </section>
 

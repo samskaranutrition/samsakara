@@ -1,7 +1,7 @@
-import aboutHeroImg from "@/assets/web/about-hero.jpg";
-import aboutSecondaryImg from "@/assets/web/about-secondary.jpg";
-import approachHeroImg from "@/assets/web/approach-hero.jpg";
-import approachSecondaryImg from "@/assets/web/approach-secondary.jpg";
+import samskaraMeaningImg from "@/assets/web/samskara-meaning.jpg";
+import aboutLifestyleImg from "@/assets/web/about-lifestyle.jpg";
+import approachGutImg from "@/assets/web/approach-gut.jpg";
+import approachHowImg from "@/assets/web/approach-how.jpg";
 import homeHeroImg from "@/assets/web/home-hero.jpg";
 import cookingImg from "@/assets/web/cooking.jpg";
 import foodImg from "@/assets/web/food-dish.jpg";
@@ -9,6 +9,7 @@ import gardenImg from "@/assets/web/garden.jpg";
 import keralaImg from "@/assets/web/kerala-landscape.jpg";
 import mediterraneanImg from "@/assets/web/mediterranean.jpg";
 import portraitHeroImg from "@/assets/web/portrait-hero.jpg";
+import programmesHeroImg from "@/assets/web/programmes-hero.jpg";
 import spicesImg from "@/assets/web/spices-market.jpg";
 
 type PhotoMeta = {
@@ -29,32 +30,42 @@ function photo(
 export const photos = {
   homeHero: photo(homeHeroImg, {
     aspect: "4 / 5",
-    objectPosition: "50% 18%",
+    objectPosition: "50% 32%",
     captionKey: "homePortrait",
   }),
-  aboutHero: photo(aboutHeroImg, {
+  aboutHero: photo(homeHeroImg, {
     aspect: "4 / 5",
-    objectPosition: "50% 22%",
+    objectPosition: "50% 32%",
     captionKey: "portrait",
   }),
-  aboutSecondary: photo(aboutSecondaryImg, {
+  aboutLifestyle: photo(aboutLifestyleImg, {
     aspect: "5 / 4",
-    objectPosition: "55% center",
-    captionKey: "aboutKitchen",
+    objectPosition: "52% 42%",
+    captionKey: "lifestyle",
   }),
-  approachHero: photo(approachHeroImg, {
-    aspect: "5 / 4",
-    objectPosition: "50% 35%",
-    captionKey: "approachConsultation",
+  samskaraMeaning: photo(samskaraMeaningImg, {
+    aspect: "4 / 5",
+    objectPosition: "50% 45%",
+    captionKey: "mediterranean",
   }),
-  approachSecondary: photo(approachSecondaryImg, {
+  approachGut: photo(approachGutImg, {
     aspect: "5 / 4",
-    objectPosition: "48% 40%",
+    objectPosition: "48% 38%",
+    captionKey: "gutFocus",
+  }),
+  approachHow: photo(approachHowImg, {
+    aspect: "5 / 4",
+    objectPosition: "50% 40%",
     captionKey: "approachReading",
+  }),
+  programmesHero: photo(programmesHeroImg, {
+    aspect: "5 / 4",
+    objectPosition: "55% 28%",
+    captionKey: "laptop",
   }),
   portrait: photo(homeHeroImg, {
     aspect: "4 / 5",
-    objectPosition: "50% 18%",
+    objectPosition: "50% 32%",
     captionKey: "portrait",
   }),
   mediterranean: photo(mediterraneanImg, {
@@ -67,9 +78,9 @@ export const photos = {
     objectPosition: "55% center",
     captionKey: "cooking",
   }),
-  samanthaLaptop: photo(cookingImg, {
+  samanthaLaptop: photo(programmesHeroImg, {
     aspect: "16 / 10",
-    objectPosition: "55% center",
+    objectPosition: "55% 28%",
     captionKey: "laptop",
   }),
   spices: photo(spicesImg, {

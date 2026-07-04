@@ -41,14 +41,14 @@ export function ApproachSections() {
           <figure className="order-1 lg:order-2 lg:col-span-5">
             <div className="page-photo-frame page-photo-frame--landscape">
               <BlurImage
-                src={photos.approachHero.src}
-                alt="Samantha during a relaxed nutrition consultation"
+                src={photos.approachGut.src}
+                alt="Samantha reading about the mind-gut connection"
                 width={1600}
                 height={1280}
                 loading="eager"
                 fetchPriority="high"
                 instant
-                objectPosition={photos.approachHero.objectPosition}
+                objectPosition={photos.approachGut.objectPosition}
               />
             </div>
           </figure>
@@ -64,12 +64,12 @@ export function ApproachSections() {
             <figure className="lg:col-span-5">
               <div className="page-photo-frame page-photo-frame--landscape">
                 <BlurImage
-                  src={photos.approachSecondary.src}
-                  alt="Samantha reading about gut health and wellbeing"
+                  src={photos.approachHow.src}
+                  alt="Samantha at home with a warm drink, taking a mindful pause"
                   width={1600}
                   height={1280}
                   loading="lazy"
-                  objectPosition={photos.approachSecondary.objectPosition}
+                  objectPosition={photos.approachHow.objectPosition}
                 />
               </div>
             </figure>

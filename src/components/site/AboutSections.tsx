@@ -25,12 +25,12 @@ export function AboutSamskaraMeaning() {
         <figure className="lg:col-span-5">
           <div className="samskara-meaning-photo overflow-hidden border border-[color:var(--color-gold)]/35 bg-[color:var(--color-cream)]">
             <BlurImage
-              src={photos.aboutSecondary.src}
+              src={photos.samskaraMeaning.src}
               alt={copy.imageAlt}
               width={1200}
               height={960}
               loading="lazy"
-              objectPosition={photos.aboutSecondary.objectPosition}
+              objectPosition={photos.samskaraMeaning.objectPosition}
             />
           </div>
         </figure>

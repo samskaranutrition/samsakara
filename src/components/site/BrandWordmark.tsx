@@ -14,7 +14,7 @@ type Props = {
 };
 
 /**
- * Samskara Nutrition wordmark — one brand name, one colour.
+ * Samskara Nutrition wordmark — Cormorant Garamond, all caps in header and footer.
  */
 export function BrandWordmark({
   layout = "horizontal",
@@ -28,8 +28,8 @@ export function BrandWordmark({
   const iconTone = markTone ?? (tone === "dark" ? "cream" : "forest");
   const nameClass =
     tone === "dark"
-      ? "font-serif text-[color:var(--color-cream)]"
-      : "font-serif text-[color:var(--color-forest)]";
+      ? "brand-wordmark-text brand-wordmark-text--dark"
+      : "brand-wordmark-text brand-wordmark-text--light";
   const alignClass = align === "start" ? "items-start text-left" : "items-center text-center";
 
   if (layout === "stacked") {
@@ -45,7 +45,7 @@ export function BrandWordmark({
   }
 
   return (
-    <div className={`flex items-center gap-2.5 sm:gap-3 ${className}`}>
+    <div className={`flex items-center gap-2 sm:gap-2.5 ${className}`}>
       <BrandMark size={markSize} tone={iconTone} className="shrink-0" />
       <span
         className={

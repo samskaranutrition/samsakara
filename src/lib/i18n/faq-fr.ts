@@ -81,7 +81,7 @@ export const faqFr: FaqTranslations = {
         "De traitement médical",
         "De médicaments sur ordonnance",
         "De soins d'urgence",
-        "Nos conseils nutritionnels visent à compléter — et non remplacer — les soins fournis par votre médecin ou d'autres professionnels de santé.",
+        "Nos conseils nutritionnels visent à compléter, et non remplacer, les soins fournis par votre médecin ou d'autres professionnels de santé.",
         "Consultez toujours votre médecin ou professionnel de santé avant d'apporter des changements alimentaires ou de mode de vie significatifs, en particulier si vous avez une condition médicale existante, si vous êtes enceinte, allaitez ou prenez des médicaments sur ordonnance.",
         "En cas d'urgence médicale, consultez immédiatement un médecin ou les services d'urgence.",
         "Bien que tous les efforts soient faits pour fournir des conseils fondés sur les preuves et personnalisés, les réponses individuelles varient et aucun résultat de santé spécifique ne peut être garanti.",

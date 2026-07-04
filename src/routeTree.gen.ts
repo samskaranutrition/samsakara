@@ -21,6 +21,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ApproachRouteImport } from './routes/approach'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApiProgrammePricesRouteImport } from './routes/api/programme-prices'
 
 const WorkWithMeRoute = WorkWithMeRouteImport.update({
   id: '/work-with-me',
@@ -82,6 +83,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiProgrammePricesRoute = ApiProgrammePricesRouteImport.update({
+  id: '/api/programme-prices',
+  path: '/api/programme-prices',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -96,6 +102,7 @@ export interface FileRoutesByFullPath {
   '/terms': typeof TermsRoute
   '/waitlist': typeof WaitlistRoute
   '/work-with-me': typeof WorkWithMeRoute
+  '/api/programme-prices': typeof ApiProgrammePricesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -110,6 +117,7 @@ export interface FileRoutesByTo {
   '/terms': typeof TermsRoute
   '/waitlist': typeof WaitlistRoute
   '/work-with-me': typeof WorkWithMeRoute
+  '/api/programme-prices': typeof ApiProgrammePricesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -125,6 +133,7 @@ export interface FileRoutesById {
   '/terms': typeof TermsRoute
   '/waitlist': typeof WaitlistRoute
   '/work-with-me': typeof WorkWithMeRoute
+  '/api/programme-prices': typeof ApiProgrammePricesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -141,6 +150,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/waitlist'
     | '/work-with-me'
+    | '/api/programme-prices'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -155,6 +165,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/waitlist'
     | '/work-with-me'
+    | '/api/programme-prices'
   id:
     | '__root__'
     | '/'
@@ -169,6 +180,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/waitlist'
     | '/work-with-me'
+    | '/api/programme-prices'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -184,6 +196,7 @@ export interface RootRouteChildren {
   TermsRoute: typeof TermsRoute
   WaitlistRoute: typeof WaitlistRoute
   WorkWithMeRoute: typeof WorkWithMeRoute
+  ApiProgrammePricesRoute: typeof ApiProgrammePricesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -272,6 +285,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/programme-prices': {
+      id: '/api/programme-prices'
+      path: '/api/programme-prices'
+      fullPath: '/api/programme-prices'
+      preLoaderRoute: typeof ApiProgrammePricesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -288,6 +308,7 @@ const rootRouteChildren: RootRouteChildren = {
   TermsRoute: TermsRoute,
   WaitlistRoute: WaitlistRoute,
   WorkWithMeRoute: WorkWithMeRoute,
+  ApiProgrammePricesRoute: ApiProgrammePricesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

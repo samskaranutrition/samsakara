@@ -7,7 +7,7 @@ import { absoluteUrl } from "@/lib/site";
 export const Route = createFileRoute("/cookies")({
   head: () => ({
     meta: [
-      { title: "Cookie Policy — Samskara Nutrition" },
+      { title: "Cookie Policy | Samskara Nutrition" },
       { name: "description", content: "How Samskara Nutrition uses cookies and similar technologies." },
       { property: "og:url", content: absoluteUrl("/cookies") },
     ],

@@ -6,7 +6,7 @@ import { absoluteUrl } from "@/lib/site";
 export const Route = createFileRoute("/terms")({
   head: () => ({
     meta: [
-      { title: "Terms of Service — Samskara Nutrition" },
+      { title: "Terms of Service | Samskara Nutrition" },
       { name: "description", content: "Terms governing use of the Samskara Nutrition website and services." },
       { property: "og:url", content: absoluteUrl("/terms") },
     ],

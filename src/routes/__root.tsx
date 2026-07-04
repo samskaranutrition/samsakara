@@ -69,7 +69,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Samskara Nutrition — Functional Nutrition for Gut Health & Wellbeing" },
+      { title: "Samskara Nutrition | Functional Nutrition for Gut Health & Wellbeing" },
       { name: "description", content: SITE_DESCRIPTION },
       { name: "author", content: "Samantha · Samskara Nutrition" },
       { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },

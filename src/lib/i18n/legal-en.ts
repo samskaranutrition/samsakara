@@ -33,7 +33,7 @@ export const legalEn: LegalTranslations = {
         heading: "What data we collect",
         paragraphs: [
           "Contact and booking data: name, email address, and any information you provide when joining the waitlist, emailing us, or booking via Calendly.",
-          "Technical data: IP address, browser type, device information, and pages visited — collected through essential site operation and, with consent, third-party booking tools.",
+          "Technical data: IP address, browser type, device information, and pages visited, collected through essential site operation and, with consent, third-party booking tools.",
           "Communication data: messages you send us and records of appointments or enquiries.",
         ],
       },
@@ -48,16 +48,16 @@ export const legalEn: LegalTranslations = {
       {
         heading: "Legal bases (UK GDPR / GDPR)",
         paragraphs: [
-          "Consent — for non-essential cookies, marketing emails, and waitlist processing where you tick the privacy checkbox.",
-          "Contract — to perform services you book or request.",
-          "Legitimate interests — to operate and secure our website, respond to enquiries, and improve our services, balanced against your rights.",
-          "Legal obligation — where we must retain records for tax, regulatory, or compliance purposes.",
+          "Consent, for non-essential cookies, marketing emails, and waitlist processing where you tick the privacy checkbox.",
+          "Contract, to perform services you book or request.",
+          "Legitimate interests, to operate and secure our website, respond to enquiries, and improve our services, balanced against your rights.",
+          "Legal obligation, where we must retain records for tax, regulatory, or compliance purposes.",
         ],
       },
       {
         heading: "Third parties",
         paragraphs: [
-          "Calendly (Calendly LLC) — appointment scheduling when you accept functional cookies or book a call. See calendly.com/privacy.",
+          "Calendly (Calendly LLC), appointment scheduling when you accept functional cookies or book a call. See calendly.com/privacy.",
           "Hosting and infrastructure providers that deliver this website (e.g. Netlify).",
           "We do not sell your personal data.",
         ],
@@ -71,7 +71,7 @@ export const legalEn: LegalTranslations = {
       {
         heading: "Retention",
         paragraphs: [
-          "We keep personal data only as long as needed for the purposes above — typically up to 24 months for waitlist enquiries unless you become a client, and longer where required by law or professional record-keeping.",
+          "We keep personal data only as long as needed for the purposes above, typically up to 24 months for waitlist enquiries unless you become a client, and longer where required by law or professional record-keeping.",
         ],
       },
       {
@@ -132,7 +132,7 @@ export const legalEn: LegalTranslations = {
       {
         heading: "Intellectual property",
         paragraphs: [
-          "All content on this website — including text, branding, images, and materials shared during programmes — is owned by Samskara Nutrition unless otherwise stated. You may not copy or reproduce it without consent.",
+          "All content on this website, including text, branding, images, and materials shared during programmes, is owned by Samskara Nutrition unless otherwise stated. You may not copy or reproduce it without consent.",
         ],
       },
       {
@@ -169,15 +169,15 @@ export const legalEn: LegalTranslations = {
       {
         heading: "Essential cookies",
         paragraphs: [
-          "Language preference (samskara.lang) — remembers EN/FR selection. Duration: until cleared.",
-          "Cookie consent (samskara.cookie-consent) — stores your cookie choice. Duration: until cleared.",
+          "Language preference (samskara.lang), remembers EN/FR selection. Duration: until cleared.",
+          "Cookie consent (samskara.cookie-consent), stores your cookie choice. Duration: until cleared.",
           "These cookies are necessary for the site to function and do not require consent under UK PECR.",
         ],
       },
       {
         heading: "Functional / third-party cookies",
         paragraphs: [
-          "Calendly — when you accept all cookies and use the booking widget, Calendly may set cookies to manage scheduling and session state. Provider: Calendly LLC. Privacy: calendly.com/privacy.",
+          "Calendly, when you accept all cookies and use the booking widget, Calendly may set cookies to manage scheduling and session state. Provider: Calendly LLC. Privacy: calendly.com/privacy.",
           "These are only loaded after you choose “Accept all” on our cookie banner.",
         ],
       },

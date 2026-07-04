@@ -9,13 +9,13 @@ import { absoluteUrl } from "@/lib/site";
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "FAQ — Samskara Nutrition" },
+      { title: "FAQ | Samskara Nutrition" },
       {
         name: "description",
         content:
-          "Answers to common questions about Samskara Nutrition — consultations, approach, appointments, and what to expect.",
+          "Answers to common questions about Samskara Nutrition: consultations, approach, appointments, and what to expect.",
       },
-      { property: "og:title", content: "FAQ — Samskara Nutrition" },
+      { property: "og:title", content: "FAQ | Samskara Nutrition" },
       {
         property: "og:description",
         content: "Frequently asked questions about functional nutrition consultations with Samskara Nutrition.",

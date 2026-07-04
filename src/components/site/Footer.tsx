@@ -1,12 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { BrandWordmark } from "@/components/site/BrandWordmark";
-import { GOOGLE_MAPS_URL, BUSINESS_ADDRESS } from "@/lib/brand";
-import { useFooterClinicCopy } from "@/lib/i18n/footer-clinic";
 
 export function Footer() {
   const { t } = useTranslation();
-  const clinic = useFooterClinicCopy();
 
   const explore = [
     { to: "/", label: t("nav.home") },
@@ -63,19 +60,6 @@ export function Footer() {
               hello@samskaranutrition.com
             </a>
             <p className="site-footer-note">{t("footer.onlineNote")}</p>
-          </div>
-
-          <div className="site-footer-clinic">
-            <p className="site-footer-label">{clinic.heading}</p>
-            <p className="site-footer-clinic-address">{BUSINESS_ADDRESS}</p>
-            <a
-              href={GOOGLE_MAPS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="location-map-btn is-footer"
-            >
-              {clinic.directions}
-            </a>
           </div>
         </div>
 

@@ -103,8 +103,8 @@ export const en: Translations = {
     language: "Language",
   },
   footer: {
-    tagline: "Functional nutrition rooted in food wisdom — for gut health and lasting wellbeing.",
-    serving: "Working with clients across the UK and Europe, online and in London.",
+    tagline: "Functional nutrition rooted in food wisdom, for gut health and lasting wellbeing.",
+    serving: "Working with clients across the UK and Europe, online.",
     explore: "Explore",
     contactLabel: "Contact",
     onlineNote: "Online across the UK & Europe",
@@ -129,19 +129,19 @@ export const en: Translations = {
     approachTitle: "Choose food that loves you back",
     pillars: [
       { title: "Rooted in real food", body: "No restrictive plans or supplements. Just deeply nourishing food rooted in Indian and Mediterranean traditions." },
-      { title: "Gut Focussed", body: "We begin with the gut — gently rebuilding the foundations of digestion, so energy, clarity and balance can follow." },
+      { title: "Gut Focussed", body: "We begin with the gut, gently rebuilding the foundations of digestion, so energy, clarity and balance can follow." },
       { title: "Science-backed", body: "Traditional wisdom has its place, but every recommendation is considered through the lens of modern nutritional science and your individual needs." },
     ],
     fnEyebrow: "Understanding the work",
     fnTitle: "What is Functional Nutrition?",
-    fnBody: "Functional nutrition looks at food as medicine — not through restriction, but through understanding what your body needs to heal. It combines traditional food wisdom with modern science to address the root causes of digestive imbalance, low energy, and hormonal stress — personalised to you.",
+    fnBody: "Functional nutrition looks at food as medicine, not through restriction, but through understanding what your body needs to heal. It combines traditional food wisdom with modern science to address the root causes of digestive imbalance, low energy, and hormonal stress, personalised to you.",
     waysEyebrow: "Work with me",
     waysTitle: "Choose Your Journey",
     seeAll: "See all programmes",
     learnMore: "Learn more",
     programmes: [
       { name: "Artha", tag: "Clarity", body: "A focused first step to understand what your body has been trying to tell you, with your personalised Samskara Blueprint™." },
-      { name: "Setu", tag: "Connection", body: "A bridge between insight and everyday life. Four weeks of guidance as your Blueprint evolves with your body." },
+      { name: "Setu", tag: "Bridge", body: "A bridge between insight and everyday life. Four weeks of guidance as your Blueprint evolves with your body." },
       { name: "Samskara", tag: "Lasting Imprints · 10 weeks", body: "Our signature ten-week transformation for those ready to move beyond restriction and restore digestive balance from within." },
     ],
     portraitAlt: "Portrait of Samantha, founder of Samskara Nutrition",
@@ -149,23 +149,23 @@ export const en: Translations = {
   about: {
     eyebrow: "About me",
     title: "I'm Samantha",
-    intro: "My journey into nutrition began long before Samskara — in Mediterranean kitchens, medical school, a decade in luxury, and the quiet wisdom of Kerala.",
+    intro: "My journey into nutrition began long before Samskara, in Mediterranean kitchens, medical school, a decade in luxury retail, and the quiet wisdom of Kerala.",
     storyEyebrow: "The story",
     storyTitle: "From Sunday lunches to slow Kerala afternoons",
     scrollHint: "Scroll to walk through the journey →",
     imageCaptions: {
-      portrait: "Samantha — founder of Samskara Nutrition",
+      portrait: "Samantha, founder of Samskara Nutrition",
     },
     chapters: [
       {
         num: "01",
         title: "Food was never just food",
-        body: "I grew up in a Mediterranean French family where long Sunday lunches stretched into the afternoon — laughter around a table, something slow-cooked, the feeling that being fed meant being loved. Food, for us, was a language.",
+        body: "I grew up in a Mediterranean French family where long Sunday lunches stretched into the afternoon: laughter around a table, something slow-cooked, the feeling that being fed meant being loved. Food, for us, was a language.",
       },
       {
         num: "02",
         title: "Understanding the body",
-        body: "Drawn to what the body carries and remembers, I studied medicine. A few years later I moved to London and stepped into luxury — a decade at Louis Vuitton, inside a world of extraordinary beauty and relentless pace.",
+        body: "Drawn to what the body carries and remembers, I studied medicine. A few years later I moved to London and stepped into luxury retail, a decade at Louis Vuitton, inside a world of extraordinary beauty and relentless pace.",
       },
       {
         num: "",
@@ -176,7 +176,7 @@ export const en: Translations = {
       {
         num: "03",
         title: "Running on empty",
-        body: "Somewhere between the sparkle and the pace, I began to notice how much people gave to their work — and how little they gave to themselves. People looking for purpose, feeling everything but well. That gap stayed with me.",
+        body: "Somewhere between the sparkle and the pace, I began to notice how much people gave to their work, and how little they gave to themselves. People looking for purpose, feeling everything but well. That gap stayed with me.",
       },
       {
         num: "04",
@@ -192,7 +192,7 @@ export const en: Translations = {
       {
         num: "05",
         title: "An unspoken language",
-        body: "It is a conversation between you and your body — and when you learn to listen, everything changes. That knowledge, woven with medicine and functional nutrition, became the foundation of Samskara.",
+        body: "It is a conversation between you and your body, and when you learn to listen, everything changes. That knowledge, woven with medicine and functional nutrition, became the foundation of Samskara.",
       },
       {
         num: "06",
@@ -202,21 +202,21 @@ export const en: Translations = {
     ],
     samskaraMeaning: {
       title: "Samskara",
-      partOfSpeech: "[SUM-SKAR-UH] — noun",
+      partOfSpeech: "[SUM-SKAR-UH], noun",
       paragraphs: [
         "From the Sanskrit, Samskara speaks to the quiet power of intention, the imprint left when we act with full awareness.",
-        "Sam — well considered, thoughtfully chosen. Kara — the action we take.",
+        "Sam, well considered, thoughtfully chosen. Kara, the action we take.",
         "Samskara is the lasting impression of the actions that are carried out with presence and purpose.",
         "Every meal, every ritual, every choice leaves its mark on us. Repeated with intention, these choices become habits. Habits become rhythms. And over time, these rhythms shape how we think, how we live, and who we become.",
         "This is the heart of Samskara, where the warmth of Indian food traditions meets the ease of the Mediterranean table, woven together with intention. To bring guidance with mindfulness, nourishing choices that create lasting transformation, not only for gut health, but in the way they move through each day.",
       ],
       tagline: "To nourish with intention.",
-      imageAlt: "Mediterranean table — food traditions at the heart of Samskara",
+      imageAlt: "Mediterranean courtyard table with olive branches, fresh food and golden light",
     },
     discoveryCta: {
       eyebrow: "Find the right path",
       title: "Your first conversation",
-      body: "A complimentary 15-minute discovery call — no obligation, just a thoughtful conversation about your health and where you'd like it to go.",
+      body: "A complimentary 15-minute discovery call. No obligation, just a thoughtful conversation about your health and where you'd like it to go.",
       cta: "Find the Right Path",
     },
   },
@@ -225,22 +225,22 @@ export const en: Translations = {
   programmes: {
     eyebrow: "Ways to work together",
     title: "Choose your journey",
-    intro: "Three thoughtfully designed ways to begin — whether you're seeking gentle direction or a complete transformation. Not sure which fits? That's exactly what a discovery call is for.",
+    intro: "Three thoughtfully designed ways to begin, whether you're seeking gentle direction or a complete transformation. Not sure which fits? That's exactly what a discovery call is for.",
     cta: "Book a Free Discovery Call",
     items: [
       {
-        name: "Samskara — My Signature Journey", tag: "Signature · 10 weeks",
+        name: "Samskara: My Signature Journey", tag: "Signature · 10 weeks",
         intro: "A deeper, more personal path to lasting change. Comprehensive support over ten weeks for those ready to truly transform how they feel.",
         includes: ["Full functional assessment", "A bespoke 10-week roadmap", "Regular 1:1 sessions", "Personalised meal & lifestyle guidance", "Continuous support between sessions"],
       },
       {
-        name: "Clarity — Lasting Impressions", tag: "Clarity",
-        intro: "A focused first step for those seeking clarity, guidance, and a deeper understanding of what their body needs — without committing to a longer journey just yet.",
+        name: "Clarity: Lasting Impressions", tag: "Clarity",
+        intro: "A focused first step for those seeking clarity, guidance, and a deeper understanding of what their body needs, without committing to a longer journey just yet.",
         includes: ["In-depth initial consultation", "Personalised first steps", "A clear, calm sense of direction"],
       },
       {
-        name: "Setu — The Bridge", tag: "The bridge",
-        intro: "Setu means bridge — structured, hands-on support to build on your initial plan, restore balance, and move from insight to lasting progress.",
+        name: "Setu: The Bridge", tag: "The bridge",
+        intro: "Setu means bridge: structured, hands-on support to build on your initial plan, restore balance, and move from insight to lasting progress.",
         includes: ["Comprehensive assessment", "Tailored nutrition guidance", "Ongoing check-ins & adjustments", "Recipes drawn from real food traditions"],
       },
     ],
@@ -250,7 +250,7 @@ export const en: Translations = {
     title: "Book your free discovery call",
     intro: "A relaxed, fifteen-minute conversation to explore where you are, what you're hoping for, and whether we're the right fit. No pressure, just a warm space to be heard.",
     steps: [
-      { n: "01", t: "Pick a time", b: "Select an available slot from the calendar — times shown are in your local timezone." },
+      { n: "01", t: "Pick a time", b: "Select an available slot from the calendar. Times shown are in your local timezone." },
       { n: "02", t: "We talk", b: "We briefly discuss and explore your health goal." },
       { n: "03", t: "You decide", b: "If it feels right, we talk next steps. If not, you leave with clarity." },
     ],
@@ -273,7 +273,7 @@ export const en: Translations = {
     intro: "The simplest way to connect is to choose a time below. You'll receive an instant confirmation email with your discovery call details.",
     bookingEyebrow: "Choose your time",
     bookingTitle: "Book a free discovery call",
-    bookingNote: "Pick a slot that suits you — Calendly handles scheduling and email confirmations automatically.",
+    bookingNote: "Pick a slot that suits you. Calendly handles scheduling and email confirmations automatically.",
     directEyebrow: "Prefer email?",
     directTitle: "Write to Samantha directly",
     or: "Or",

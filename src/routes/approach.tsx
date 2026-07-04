@@ -8,13 +8,13 @@ import { absoluteUrl } from "@/lib/site";
 export const Route = createFileRoute("/approach")({
   head: () => ({
     meta: [
-      { title: "The Approach — Samskara Nutrition" },
+      { title: "The Approach | Samskara Nutrition" },
       {
         name: "description",
         content: "Functional nutrition focused on gut health. Personalised support for digestion, hormones, energy, and lasting wellbeing.",
       },
-      { property: "og:title", content: "The Approach — Samskara Nutrition" },
-      { property: "og:image", content: absoluteUrl(photos.approachHero.src) },
+      { property: "og:title", content: "The Approach | Samskara Nutrition" },
+      { property: "og:image", content: absoluteUrl(photos.approachGut.src) },
       { property: "og:url", content: absoluteUrl("/approach") },
     ],
     links: [{ rel: "canonical", href: absoluteUrl("/approach") }],

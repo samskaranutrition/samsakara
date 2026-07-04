@@ -81,7 +81,7 @@ export const faqEn: FaqTranslations = {
         "Medical treatment",
         "Prescription medication",
         "Emergency healthcare",
-        "Our nutritional advice is intended to complement — not replace — the care provided by your doctor or other healthcare professionals.",
+        "Our nutritional advice is intended to complement, not replace, the care provided by your doctor or other healthcare professionals.",
         "Always consult your GP or healthcare provider before making significant dietary or lifestyle changes, particularly if you have an existing medical condition, are pregnant, breastfeeding or are taking prescription medication.",
         "If you experience a medical emergency, seek immediate medical attention by contacting your GP or emergency services.",
         "Whilst every effort is made to provide evidence-informed and personalised guidance, individual responses vary and no specific health outcomes or results can be guaranteed.",

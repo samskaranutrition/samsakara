@@ -33,7 +33,7 @@ export const legalFr: LegalTranslations = {
         heading: "Données collectées",
         paragraphs: [
           "Données de contact et de réservation : nom, adresse e-mail et informations fournies lors de l'inscription à la liste d'attente, par e-mail ou via Calendly.",
-          "Données techniques : adresse IP, type de navigateur, appareil et pages visitées — via le fonctionnement essentiel du site et, avec consentement, les outils de réservation tiers.",
+          "Données techniques : adresse IP, type de navigateur, appareil et pages visitées, via le fonctionnement essentiel du site et, avec consentement, les outils de réservation tiers.",
           "Données de communication : messages envoyés et traces de rendez-vous ou demandes.",
         ],
       },
@@ -48,16 +48,16 @@ export const legalFr: LegalTranslations = {
       {
         heading: "Bases juridiques (RGPD / RGPD UK)",
         paragraphs: [
-          "Consentement — cookies non essentiels, e-mails marketing, traitement de la liste d'attente avec case à cocher.",
-          "Contrat — exécution des services réservés ou demandés.",
-          "Intérêts légitimes — exploitation sécurisée du site et amélioration des services.",
-          "Obligation légale — conservation requise par la loi.",
+          "Consentement, cookies non essentiels, e-mails marketing, traitement de la liste d'attente avec case à cocher.",
+          "Contrat, exécution des services réservés ou demandés.",
+          "Intérêts légitimes, exploitation sécurisée du site et amélioration des services.",
+          "Obligation légale, conservation requise par la loi.",
         ],
       },
       {
         heading: "Tiers",
         paragraphs: [
-          "Calendly (Calendly LLC) — planification des rendez-vous avec consentement. Voir calendly.com/privacy.",
+          "Calendly (Calendly LLC), planification des rendez-vous avec consentement. Voir calendly.com/privacy.",
           "Hébergeurs et fournisseurs d'infrastructure (ex. Netlify).",
           "Nous ne vendons pas vos données personnelles.",
         ],
@@ -71,7 +71,7 @@ export const legalFr: LegalTranslations = {
       {
         heading: "Conservation",
         paragraphs: [
-          "Conservation limitée à la durée nécessaire — généralement jusqu'à 24 mois pour la liste d'attente, sauf relation client ou obligation légale.",
+          "Conservation limitée à la durée nécessaire, généralement jusqu'à 24 mois pour la liste d'attente, sauf relation client ou obligation légale.",
         ],
       },
       {
@@ -163,15 +163,15 @@ export const legalFr: LegalTranslations = {
       {
         heading: "Cookies essentiels",
         paragraphs: [
-          "Langue (samskara.lang) — préférence EN/FR.",
-          "Consentement (samskara.cookie-consent) — mémorise votre choix.",
+          "Langue (samskara.lang), préférence EN/FR.",
+          "Consentement (samskara.cookie-consent), mémorise votre choix.",
           "Nécessaires au fonctionnement ; pas de consentement requis au sens du PECR.",
         ],
       },
       {
         heading: "Cookies fonctionnels / tiers",
         paragraphs: [
-          "Calendly — chargé uniquement après « Tout accepter ». Calendly LLC. Voir calendly.com/privacy.",
+          "Calendly (Calendly LLC), chargé uniquement après « Tout accepter ». Calendly LLC. Voir calendly.com/privacy.",
         ],
       },
       {

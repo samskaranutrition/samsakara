@@ -9,15 +9,15 @@ import { absoluteUrl } from "@/lib/site";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Book — Samskara Nutrition" },
+      { title: "Contact & Book | Samskara Nutrition" },
       {
         name: "description",
         content: "Book a complimentary discovery call with Samantha online via Calendly, or email hello@samskaranutrition.com.",
       },
-      { property: "og:title", content: "Contact & Book — Samskara Nutrition" },
+      { property: "og:title", content: "Contact & Book | Samskara Nutrition" },
       {
         property: "og:description",
-        content: "Pick a time that suits you — book a relaxed discovery call online.",
+        content: "Pick a time that suits you and book a relaxed discovery call online.",
       },
       { property: "og:url", content: absoluteUrl("/contact") },
     ],

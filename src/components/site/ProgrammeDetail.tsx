@@ -12,11 +12,12 @@ const ICON_BY_ID: Record<string, ProgrammeIconVariant> = {
 type OverviewProps = {
   items: ProgrammeDetail[];
   labels: ProgrammesPageContent["labels"];
+  id?: string;
 };
 
-export function ProgrammeOverview({ items, labels }: OverviewProps) {
+export function ProgrammeOverview({ items, labels, id }: OverviewProps) {
   return (
-    <section className="programme-overview" aria-label={labels.overviewTitle}>
+    <section className="programme-overview scroll-mt-24" id={id} aria-label={labels.overviewTitle}>
       <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-10">
         <h2 className="programme-overview-heading">{labels.overviewTitle}</h2>
         <div className="programme-overview-grid">
