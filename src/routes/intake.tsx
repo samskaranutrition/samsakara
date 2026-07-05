@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { HealthIntakeForm } from "@/components/site/HealthIntakeForm";
 import { SiteLayout } from "@/components/site/Layout";
 import { usePageMeta } from "@/hooks/usePageMeta";
-import { absoluteUrl } from "@/lib/site";
+import { absoluteUrl, getHreflangLinks } from "@/lib/site";
 
 export const Route = createFileRoute("/intake")({
   head: () => ({
@@ -15,7 +15,7 @@ export const Route = createFileRoute("/intake")({
       },
       { property: "og:url", content: absoluteUrl("/intake") },
     ],
-    links: [{ rel: "canonical", href: absoluteUrl("/intake") }],
+    links: getHreflangLinks("/intake"),
   }),
   component: IntakePage,
 });

@@ -5,7 +5,7 @@ import { FaqAccordion, FaqTerms } from "@/components/site/FaqContent";
 import { SiteLayout } from "@/components/site/Layout";
 import { useReveal } from "@/hooks/useReveal";
 import { usePageMeta } from "@/hooks/usePageMeta";
-import { absoluteUrl } from "@/lib/site";
+import { absoluteUrl, getHreflangLinks } from "@/lib/site";
 
 export const Route = createFileRoute("/faq")({
   head: () => ({
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/faq")({
       },
       { property: "og:url", content: absoluteUrl("/faq") },
     ],
-    links: [{ rel: "canonical", href: absoluteUrl("/faq") }],
+    links: getHreflangLinks("/faq"),
   }),
   component: FaqPage,
 });

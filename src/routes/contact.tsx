@@ -4,7 +4,7 @@ import { SiteLayout } from "@/components/site/Layout";
 import { CalendlyEmbed } from "@/components/site/CalendlyEmbed";
 import { useReveal } from "@/hooks/useReveal";
 import { usePageMeta } from "@/hooks/usePageMeta";
-import { absoluteUrl } from "@/lib/site";
+import { absoluteUrl, getHreflangLinks } from "@/lib/site";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -21,7 +21,7 @@ export const Route = createFileRoute("/contact")({
       },
       { property: "og:url", content: absoluteUrl("/contact") },
     ],
-    links: [{ rel: "canonical", href: absoluteUrl("/contact") }],
+    links: getHreflangLinks("/contact"),
   }),
   component: ContactPage,
 });

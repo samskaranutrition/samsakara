@@ -8,7 +8,7 @@ import { useReveal } from "@/hooks/useReveal";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { tap } from "@/lib/haptics";
 import { photos } from "@/lib/photos";
-import { absoluteUrl } from "@/lib/site";
+import { absoluteUrl, getHreflangLinks } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: absoluteUrl(photos.homeHero.src) },
     ],
     links: [
-      { rel: "canonical", href: absoluteUrl("/") },
+      ...getHreflangLinks("/"),
       { rel: "preload", href: photos.homeHero.src, as: "image", fetchPriority: "high" },
     ],
   }),
@@ -121,29 +121,31 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="bg-background">
+      <section className="bg-[color:var(--color-cream-deep)]">
         <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6 sm:py-24 lg:px-10">
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end md:gap-8">
             <div className="max-w-xl">
               <p className="eyebrow">{home.waysEyebrow}</p>
               <h2 className="mt-5 font-serif text-3xl text-[color:var(--color-forest)] sm:text-4xl md:text-5xl">{home.waysTitle}</h2>
             </div>
-            <Link to="/programmes" className="text-sm uppercase tracking-[0.18em] text-[color:var(--color-terracotta)] hover:text-[color:var(--color-forest)]">
+            <Link to="/programmes" className="text-sm uppercase tracking-[0.18em] text-[color:var(--color-terracotta)] hover:text-[color:var(--color-forest)] transition-colors">
               {home.seeAll} <span className="cta-arrow ml-1">→</span>
             </Link>
           </div>
-          <div ref={programmesRef} className="reveal mt-10 grid gap-px bg-[color:var(--color-gold)]/40 sm:mt-14 md:grid-cols-3">
+          <div ref={programmesRef} className="reveal mt-12 grid gap-6 sm:mt-16 md:grid-cols-3">
             {home.programmes.map((p: any, i: number) => {
               const iconVariant = PROGRAMME_ICON_ORDER[i] ?? "signature";
               return (
                 <Link key={p.name} to="/programmes" data-reveal-child
-                  className="group relative flex flex-col gap-4 bg-background p-7 transition-colors hover:bg-[color:var(--color-cream-deep)] sm:p-10">
-                  <ProgrammeIcon variant={iconVariant} context="home" />
-                  <span className="eyebrow">{p.tag}</span>
+                  className="group relative flex flex-col gap-5 rounded-2xl bg-background p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:shadow-[color:var(--color-gold)]/20 sm:p-10">
+                  <div className="mb-2 transition-transform duration-300 group-hover:scale-105">
+                    <ProgrammeIcon variant={iconVariant} context="home" />
+                  </div>
+                  <span className="eyebrow opacity-80">{p.tag}</span>
                   <h3 className="font-serif text-2xl text-[color:var(--color-forest)]">{p.name}</h3>
-                  <p className="text-body text-[0.98rem]">{p.body}</p>
-                  <span className="mt-auto pt-6 text-xs uppercase tracking-[0.18em] text-[color:var(--color-terracotta)] group-hover:text-[color:var(--color-forest)]">
-                    {home.learnMore} <span className="cta-arrow ml-1">→</span>
+                  <p className="text-body text-[0.98rem] leading-relaxed">{p.body}</p>
+                  <span className="mt-auto pt-6 text-xs font-medium uppercase tracking-[0.18em] text-[color:var(--color-terracotta)] transition-colors group-hover:text-[color:var(--color-forest)]">
+                    {home.learnMore} <span className="cta-arrow ml-1 inline-block transition-transform group-hover:translate-x-1">→</span>
                   </span>
                 </Link>
               );

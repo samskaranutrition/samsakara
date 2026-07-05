@@ -98,10 +98,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "icon", type: "image/png", href: "/favicon-32x32.png", sizes: "32x32" },
       { rel: "icon", type: "image/png", href: "/favicon-16x16.png", sizes: "16x16" },
       { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
-      { rel: "canonical", href: SITE_URL },
-      { rel: "alternate", hrefLang: "en", href: absoluteUrl("/") },
-      { rel: "alternate", hrefLang: "fr", href: absoluteUrl("/?lang=fr") },
-      { rel: "alternate", hrefLang: "x-default", href: absoluteUrl("/") },
     ],
     scripts: [
       {

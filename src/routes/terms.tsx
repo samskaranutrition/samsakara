@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
 import { LegalDocument } from "@/components/site/LegalDocument";
 import { usePageMeta } from "@/hooks/usePageMeta";
-import { absoluteUrl } from "@/lib/site";
+import { absoluteUrl, getHreflangLinks } from "@/lib/site";
 
 export const Route = createFileRoute("/terms")({
   head: () => ({
@@ -11,7 +11,7 @@ export const Route = createFileRoute("/terms")({
       { name: "description", content: "Terms governing use of the Samskara Nutrition website and services." },
       { property: "og:url", content: absoluteUrl("/terms") },
     ],
-    links: [{ rel: "canonical", href: absoluteUrl("/terms") }],
+    links: getHreflangLinks("/terms"),
   }),
   component: TermsPage,
 });

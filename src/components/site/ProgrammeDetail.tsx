@@ -70,7 +70,9 @@ export function ProgrammeOverview({ items, labels, id }: OverviewProps) {
             );
           })}
         </div>
-        <p className="programme-overview-pay-note">{labels.payNote}</p>
+        {labels.payNote ? (
+          <p className="programme-overview-pay-note">{labels.payNote}</p>
+        ) : null}
         <p className="programme-overview-intake-note">
           {labels.intakeHint}{" "}
           <Link to="/intake" className="programme-overview-intake-link">

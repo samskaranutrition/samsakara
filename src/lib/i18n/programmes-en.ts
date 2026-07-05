@@ -14,7 +14,7 @@ export const programmesEn: ProgrammesPageContent = {
     overviewTitle: "Choose your path",
     bookProgramme: "Book your Journey",
     viewDetails: "View details",
-    payNote: "Prices shown are synced from Calendly. Secure booking and payment collected at checkout.",
+    payNote: "Booking and payment are handled securely — you'll receive instant confirmation by email.",
     intakeLink: "Complete your health questionnaire",
     intakeHint: "After booking, please submit your pre-consultation form at least 48 hours before your first session.",
   },

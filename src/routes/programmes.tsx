@@ -14,7 +14,7 @@ import { mergeProgrammePrices, useProgrammePrices } from "@/hooks/useProgrammePr
 import { tap } from "@/lib/haptics";
 import type { ProgrammesPageContent } from "@/lib/i18n/programmes-types";
 import { photos } from "@/lib/photos";
-import { absoluteUrl } from "@/lib/site";
+import { absoluteUrl, getHreflangLinks } from "@/lib/site";
 
 export const Route = createFileRoute("/programmes")({
   head: () => ({
@@ -28,7 +28,7 @@ export const Route = createFileRoute("/programmes")({
       { property: "og:image", content: absoluteUrl(photos.programmesHero.src) },
       { property: "og:url", content: absoluteUrl("/programmes") },
     ],
-    links: [{ rel: "canonical", href: absoluteUrl("/programmes") }],
+    links: getHreflangLinks("/programmes"),
   }),
   component: ProgrammesPage,
 });

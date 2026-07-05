@@ -78,3 +78,13 @@ export function absoluteUrl(path: string): string {
   const normalized = path.startsWith("/") ? path : `/${path}`;
   return `${SITE_URL}${normalized}`;
 }
+
+export function getHreflangLinks(path: string) {
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+  return [
+    { rel: "canonical", href: absoluteUrl(normalizedPath) },
+    { rel: "alternate", hrefLang: "en", href: absoluteUrl(normalizedPath) },
+    { rel: "alternate", hrefLang: "fr", href: absoluteUrl(normalizedPath === "/" ? "/?lang=fr" : `${normalizedPath}?lang=fr`) },
+    { rel: "alternate", hrefLang: "x-default", href: absoluteUrl(normalizedPath) },
+  ];
+}

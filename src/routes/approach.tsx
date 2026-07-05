@@ -4,7 +4,7 @@ import { ApproachSections } from "@/components/site/ApproachContent";
 import { SiteLayout } from "@/components/site/Layout";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { photos } from "@/lib/photos";
-import { absoluteUrl } from "@/lib/site";
+import { absoluteUrl, getHreflangLinks } from "@/lib/site";
 
 export const Route = createFileRoute("/approach")({
   head: () => ({
@@ -18,7 +18,7 @@ export const Route = createFileRoute("/approach")({
       { property: "og:image", content: absoluteUrl(photos.approachGut.src) },
       { property: "og:url", content: absoluteUrl("/approach") },
     ],
-    links: [{ rel: "canonical", href: absoluteUrl("/approach") }],
+    links: getHreflangLinks("/approach"),
   }),
   component: ApproachPage,
 });

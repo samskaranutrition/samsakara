@@ -7,7 +7,7 @@ import { BlurImage } from "@/components/site/BlurImage";
 import { useReveal } from "@/hooks/useReveal";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { photos } from "@/lib/photos";
-import { absoluteUrl } from "@/lib/site";
+import { absoluteUrl, getHreflangLinks } from "@/lib/site";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:url", content: absoluteUrl("/about") },
       { property: "og:image", content: absoluteUrl(photos.aboutHero.src) },
     ],
-    links: [{ rel: "canonical", href: absoluteUrl("/about") }],
+    links: getHreflangLinks("/about"),
   }),
   component: AboutPage,
 });
