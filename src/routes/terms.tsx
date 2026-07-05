@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
 import { LegalDocument } from "@/components/site/LegalDocument";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { absoluteUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/terms")({
@@ -12,11 +13,17 @@ export const Route = createFileRoute("/terms")({
     ],
     links: [{ rel: "canonical", href: absoluteUrl("/terms") }],
   }),
-  component: () => (
+  component: TermsPage,
+});
+
+function TermsPage() {
+  usePageMeta("terms");
+
+  return (
     <SiteLayout>
       <section className="legal-page">
         <LegalDocument docKey="terms" />
       </section>
     </SiteLayout>
-  ),
-});
+  );
+}

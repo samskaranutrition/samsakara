@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
 import { LegalDocument } from "@/components/site/LegalDocument";
 import { CookiePreferences } from "@/components/site/CookiePreferences";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { absoluteUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/cookies")({
@@ -17,6 +18,8 @@ export const Route = createFileRoute("/cookies")({
 });
 
 function CookiesPage() {
+  usePageMeta("cookies");
+
   return (
     <SiteLayout>
       <section className="legal-page">

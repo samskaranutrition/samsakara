@@ -9,6 +9,7 @@ import {
 } from "@/components/site/ProgrammeDetail";
 import { SiteLayout } from "@/components/site/Layout";
 import { useReveal } from "@/hooks/useReveal";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { mergeProgrammePrices, useProgrammePrices } from "@/hooks/useProgrammePrices";
 import { tap } from "@/lib/haptics";
 import type { ProgrammesPageContent } from "@/lib/i18n/programmes-types";
@@ -33,6 +34,7 @@ export const Route = createFileRoute("/programmes")({
 });
 
 function ProgrammesPage() {
+  usePageMeta("programmes");
   const { t } = useTranslation();
   const p = t("programmesPage", { returnObjects: true }) as ProgrammesPageContent;
   const heroRef = useReveal<HTMLDivElement>();

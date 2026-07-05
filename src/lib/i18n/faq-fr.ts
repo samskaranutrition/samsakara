@@ -99,6 +99,7 @@ export const faqFr: FaqTranslations = {
       heading: "5. Questionnaire de santé",
       paragraphs: [
         "Votre questionnaire de santé doit être complété et renvoyé au moins 48 heures avant votre consultation.",
+        "Envoyez le formulaire sécurisé sur samskaranutrition.com/intake après votre réservation.",
         "Cela permet de disposer du temps nécessaire pour examiner votre historique de santé et préparer des recommandations personnalisées.",
         "Le non-respect du délai peut entraîner le report de votre rendez-vous.",
       ],

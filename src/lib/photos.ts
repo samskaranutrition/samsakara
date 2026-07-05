@@ -1,4 +1,5 @@
 import samskaraMeaningImg from "@/assets/web/samskara-meaning.jpg";
+import aboutHeroImg from "@/assets/web/about-hero.jpg";
 import aboutLifestyleImg from "@/assets/web/about-lifestyle.jpg";
 import approachGutImg from "@/assets/web/approach-gut.jpg";
 import approachHowImg from "@/assets/web/approach-how.jpg";
@@ -33,9 +34,10 @@ export const photos = {
     objectPosition: "50% 32%",
     captionKey: "homePortrait",
   }),
-  aboutHero: photo(homeHeroImg, {
-    aspect: "4 / 5",
-    objectPosition: "50% 32%",
+  /** Native 5184×2920 (16∶9) — kitchen portrait, subject centred */
+  aboutHero: photo(aboutHeroImg, {
+    aspect: "16 / 9",
+    objectPosition: "50% 42%",
     captionKey: "portrait",
   }),
   aboutLifestyle: photo(aboutLifestyleImg, {

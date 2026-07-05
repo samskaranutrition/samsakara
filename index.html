@@ -44,6 +44,18 @@
       <input type="email" name="email" />
       <input type="checkbox" name="consent" value="yes" />
     </form>
+    <form name="health-intake" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="health-intake" />
+      <input type="text" name="full_name" />
+      <input type="email" name="email" />
+      <input type="text" name="programme" />
+      <input type="date" name="appointment_date" />
+      <textarea name="health_summary"></textarea>
+      <textarea name="medications"></textarea>
+      <textarea name="goals"></textarea>
+      <input type="checkbox" name="service_consent" value="yes" />
+      <input type="checkbox" name="health_consent" value="yes" />
+    </form>
     <div id="root"></div>
   </body>
 </html>

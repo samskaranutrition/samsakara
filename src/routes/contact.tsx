@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { SiteLayout } from "@/components/site/Layout";
 import { CalendlyEmbed } from "@/components/site/CalendlyEmbed";
 import { useReveal } from "@/hooks/useReveal";
-import { BUSINESS_ADDRESS, GOOGLE_MAPS_URL } from "@/lib/brand";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { absoluteUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/contact")({
@@ -27,6 +27,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
+  usePageMeta("contact");
   const { t } = useTranslation();
   const c = t("contact", { returnObjects: true }) as {
     eyebrow: string;
@@ -40,8 +41,6 @@ function ContactPage() {
     or: string;
     bookLink: string;
   };
-  const loc = t("clinic.visitHeading");
-  const directions = t("clinic.directions");
   const heroRef = useReveal<HTMLDivElement>();
 
   return (
@@ -66,21 +65,6 @@ function ContactPage() {
           <div className="mt-10">
             <CalendlyEmbed />
           </div>
-        </div>
-      </section>
-
-      <section className="bg-[color:var(--color-cream-deep)]">
-        <div className="mx-auto max-w-xl px-6 py-16 text-center lg:px-10 lg:py-20">
-          <p className="eyebrow">{loc}</p>
-          <p className="mt-4 font-serif text-lg text-[color:var(--color-forest)]">{BUSINESS_ADDRESS}</p>
-          <a
-            href={GOOGLE_MAPS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="location-map-btn mt-8"
-          >
-            {directions} <span aria-hidden>→</span>
-          </a>
         </div>
       </section>
 

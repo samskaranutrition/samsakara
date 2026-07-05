@@ -12,9 +12,11 @@ export const programmesEn: ProgrammesPageContent = {
     blueprintEvolves: "Your Samskara Blueprint Evolves With",
     plus: "Everything included in Artha, plus:",
     overviewTitle: "Choose your path",
-    bookProgramme: "Reserve & pay",
+    bookProgramme: "Book your Journey",
     viewDetails: "View details",
     payNote: "Prices shown are synced from Calendly. Secure booking and payment collected at checkout.",
+    intakeLink: "Complete your health questionnaire",
+    intakeHint: "After booking, please submit your pre-consultation form at least 48 hours before your first session.",
   },
   items: [
     {
@@ -102,6 +104,7 @@ export const programmesEn: ProgrammesPageContent = {
       price: "£495",
       duration: "10 weeks",
       hook: "Our signature transformation for lasting gut health and wellbeing.",
+      highlight: "That is because restriction is not restoration.",
       paragraphs: [
         "If you've been living with bloating, digestive discomfort, food sensitivities, low energy, skin flare-ups, or a gut that simply hasn't felt right for a long time, you've probably already tried changing individual foods.",
         "Perhaps you've removed gluten, dairy or sugar. Maybe you've followed an online nutrition plan and even noticed some improvement, until progress slowed and old symptoms gradually returned.",

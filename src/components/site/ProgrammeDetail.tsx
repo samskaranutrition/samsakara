@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import type { ProgrammeDetail, ProgrammesPageContent } from "@/lib/i18n/programmes-types";
 import { ProgrammeIcon, type ProgrammeIconVariant } from "@/components/site/ProgrammeIcon";
-import { programmeBookingUrl } from "@/lib/site";
+import { ProgrammeBookLink } from "@/components/site/ProgrammeBookLink";
 
 const ICON_BY_ID: Record<string, ProgrammeIconVariant> = {
   artha: "clarity",
@@ -29,36 +29,54 @@ export function ProgrammeOverview({ items, labels, id }: OverviewProps) {
                 key={item.id}
                 className={"programme-overview-card" + (featured ? " is-featured" : "")}
               >
-                <div className="programme-overview-card-top">
-                  <ProgrammeIcon variant={icon} context="overview" onDark={featured} />
-                  <div>
-                    <h3 className="programme-overview-name">{item.name}</h3>
-                    <p className="programme-overview-subtitle">{item.subtitle}</p>
+                {featured ? (
+                  <div className="programme-overview-card-band">
+                    <div className="programme-overview-card-top">
+                      <ProgrammeIcon variant={icon} context="overview" onDark={featured} />
+                      <div>
+                        <h3 className="programme-overview-name">{item.name}</h3>
+                        <p className="programme-overview-subtitle">{item.subtitle}</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="programme-overview-price-row">
-                  <p className="programme-overview-price">{item.price}</p>
-                  <span className="programme-overview-duration">{item.duration}</span>
-                </div>
-                <p className="programme-overview-hook">{item.hook}</p>
-                <div className="programme-overview-actions">
-                  <a
-                    href={programmeBookingUrl(item.id)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="programme-overview-btn programme-overview-btn--primary"
-                  >
-                    {labels.bookProgramme} <span aria-hidden>→</span>
-                  </a>
-                  <a href={`#${item.id}`} className="programme-overview-btn programme-overview-btn--ghost">
-                    {labels.viewDetails}
-                  </a>
+                ) : (
+                  <div className="programme-overview-card-top">
+                    <ProgrammeIcon variant={icon} context="overview" onDark={featured} />
+                    <div>
+                      <h3 className="programme-overview-name">{item.name}</h3>
+                      <p className="programme-overview-subtitle">{item.subtitle}</p>
+                    </div>
+                  </div>
+                )}
+                <div className={"programme-overview-card-body" + (featured ? " is-below-band" : "")}>
+                  <div className="programme-overview-price-row">
+                    <p className="programme-overview-price">{item.price}</p>
+                    <span className="programme-overview-duration">{item.duration}</span>
+                  </div>
+                  <p className="programme-overview-hook">{item.hook}</p>
+                  <div className="programme-overview-actions">
+                    <ProgrammeBookLink
+                      programmeId={item.id}
+                      className="programme-overview-btn programme-overview-btn--primary"
+                    >
+                      {labels.bookProgramme} <span aria-hidden>→</span>
+                    </ProgrammeBookLink>
+                    <a href={`#${item.id}`} className="programme-overview-btn programme-overview-btn--ghost">
+                      {labels.viewDetails}
+                    </a>
+                  </div>
                 </div>
               </article>
             );
           })}
         </div>
         <p className="programme-overview-pay-note">{labels.payNote}</p>
+        <p className="programme-overview-intake-note">
+          {labels.intakeHint}{" "}
+          <Link to="/intake" className="programme-overview-intake-link">
+            {labels.intakeLink} →
+          </Link>
+        </p>
       </div>
     </section>
   );
@@ -85,10 +103,6 @@ export function ProgrammeDetailSection({ programme: p, labels, featured }: Detai
             <h2 className="programme-detail-name programme-detail-name--on-dark">{p.name}</h2>
             <p className="programme-detail-subtitle programme-detail-subtitle--on-dark">{p.subtitle}</p>
           </div>
-          <div className="programme-detail-price-block programme-detail-price-block--on-dark">
-            <p className="programme-detail-price">{p.price}</p>
-            <span className="programme-detail-duration">{p.duration}</span>
-          </div>
         </div>
       ) : null}
 
@@ -105,26 +119,18 @@ export function ProgrammeDetailSection({ programme: p, labels, featured }: Detai
             <div className="programme-detail-price-block">
               <p className="programme-detail-price">{p.price}</p>
               <span className="programme-detail-duration">{p.duration}</span>
-              <a
-                href={programmeBookingUrl(p.id)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="programme-detail-book"
-              >
+              <ProgrammeBookLink programmeId={p.id} className="programme-detail-book">
                 {labels.bookProgramme} <span aria-hidden>→</span>
-              </a>
+              </ProgrammeBookLink>
             </div>
           </>
         ) : (
-          <div className="programme-detail-header-book-row">
-            <a
-              href={programmeBookingUrl(p.id)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="programme-detail-book programme-detail-book--on-dark"
-            >
+          <div className="programme-detail-price-block">
+            <p className="programme-detail-price">{p.price}</p>
+            <span className="programme-detail-duration">{p.duration}</span>
+            <ProgrammeBookLink programmeId={p.id} className="programme-detail-book">
               {labels.bookProgramme} <span aria-hidden>→</span>
-            </a>
+            </ProgrammeBookLink>
           </div>
         )}
       </header>
@@ -135,11 +141,7 @@ export function ProgrammeDetailSection({ programme: p, labels, featured }: Detai
         {p.paragraphs.map((paragraph, i) => (
           <p
             key={i}
-            className={
-              paragraph === "That is because restriction is not restoration."
-                ? "programme-detail-highlight"
-                : undefined
-            }
+            className={p.highlight && paragraph === p.highlight ? "programme-detail-highlight" : undefined}
           >
             {paragraph}
           </p>

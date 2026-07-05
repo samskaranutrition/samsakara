@@ -39,6 +39,8 @@ export type ProgrammesPageContent = {
     bookProgramme: string;
     viewDetails: string;
     payNote: string;
+    intakeLink: string;
+    intakeHint: string;
   };
   items: ProgrammeDetail[];
   discovery: {

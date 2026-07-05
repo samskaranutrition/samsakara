@@ -4,6 +4,7 @@ import { DiscoveryCallCTA } from "@/components/site/AboutSections";
 import { FaqAccordion, FaqTerms } from "@/components/site/FaqContent";
 import { SiteLayout } from "@/components/site/Layout";
 import { useReveal } from "@/hooks/useReveal";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { absoluteUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/faq")({
@@ -28,6 +29,7 @@ export const Route = createFileRoute("/faq")({
 });
 
 function FaqPage() {
+  usePageMeta("faq");
   const { t } = useTranslation();
   const heroRef = useReveal<HTMLDivElement>();
 

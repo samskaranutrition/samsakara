@@ -5,6 +5,7 @@ import { ClosingCTA } from "@/components/site/ClosingCTA";
 import { BlurImage } from "@/components/site/BlurImage";
 import { ProgrammeIcon, PROGRAMME_ICON_ORDER } from "@/components/site/ProgrammeIcon";
 import { useReveal } from "@/hooks/useReveal";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { tap } from "@/lib/haptics";
 import { photos } from "@/lib/photos";
 import { absoluteUrl } from "@/lib/site";
@@ -28,6 +29,7 @@ export const Route = createFileRoute("/")({
 });
 
 function HomePage() {
+  usePageMeta("home");
   const { t } = useTranslation();
   const home = t("home", { returnObjects: true }) as any;
   const heroRef = useReveal<HTMLDivElement>();

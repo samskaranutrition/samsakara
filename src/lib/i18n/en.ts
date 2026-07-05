@@ -2,10 +2,12 @@
 import { approachEn } from "./approach-en";
 import { faqEn } from "./faq-en";
 import { legalEn } from "./legal-en";
+import { pageMetaEn } from "./page-meta-en";
 import { programmesEn } from "./programmes-en";
 import type { ApproachPageContent, ProgrammesPageContent } from "./programmes-types";
 import type { FaqTranslations } from "./faq-types";
 import type { LegalTranslations } from "./legal-types";
+import type { PageMetaMap } from "./page-meta-types";
 
 type Pillar = { title: string; body: string };
 type ProgItem = { name: string; tag: string; body: string };
@@ -40,7 +42,7 @@ export type Translations = {
     programmes: ProgItem[]; portraitAlt: string;
   };
   about: {
-    eyebrow: string; title: string; intro: string;
+    eyebrow: string; title: string; subtitle: string; intro: string;
     storyEyebrow: string; storyTitle: string; scrollHint: string;
     imageCaptions: Record<"portrait", string>;
     chapters: StoryChapter[];
@@ -85,6 +87,38 @@ export type Translations = {
     payCta: string;
     secureNote: string;
   };
+  bookingConsent: {
+    title: string;
+    intro: string;
+    serviceLabel: string;
+    healthLabel: string;
+    termsLink: string;
+    privacyLink: string;
+    continue: string;
+    continueProgramme: string;
+  };
+  intake: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    deadlineNote: string;
+    nameLabel: string;
+    emailLabel: string;
+    programmeLabel: string;
+    programmeOptions: Record<string, string>;
+    appointmentLabel: string;
+    healthLabel: string;
+    medicationsLabel: string;
+    goalsLabel: string;
+    submit: string;
+    submitting: string;
+    doneTitle: string;
+    doneBody: string;
+    errorBody: string;
+    privacyNote: string;
+    bookDiscovery: string;
+  };
+  pageMeta: PageMetaMap;
 };
 
 export const en: Translations = {
@@ -107,7 +141,7 @@ export const en: Translations = {
     serving: "Working with clients across the UK and Europe, online.",
     explore: "Explore",
     contactLabel: "Contact",
-    onlineNote: "Online across the UK & Europe",
+    onlineNote: "Based in London, accessible worldwide",
     copyright: "© 2026 Samskara Nutrition · Made with care",
     clinicHeading: "Our London clinic",
     clinicHint: "",
@@ -116,7 +150,7 @@ export const en: Translations = {
   closing: {
     eyebrow: "A first conversation",
     title: "Struggling to make decisions or trust yourself?",
-    body: "Your gut may have lost its voice. I help restore the connection between gut and mind, so clarity returns, energy steadies, and you feel aligned again.",
+    body: "Your gut may have lost its voice. I help you reconnect with it, so clarity, energy and balance can follow.",
     cta: "Find the Right Path",
   },
   home: {
@@ -124,7 +158,7 @@ export const en: Translations = {
     title: "Functional nutrition focussing on gut health and wellbeing",
     body: "Supporting gut healing, digestive balance, and lasting vitality through nourishment rather than restriction.",
     explore: "Choose Your Journey",
-    quote: "Healing doesn't have to begin with restriction. It can begin with nourishment.",
+    quote: "Change doesn't have to begin with restriction. It can begin with nourishment.",
     approachEyebrow: "Approach",
     approachTitle: "Choose food that loves you back",
     pillars: [
@@ -132,9 +166,9 @@ export const en: Translations = {
       { title: "Gut Focussed", body: "We begin with the gut, gently rebuilding the foundations of digestion, so energy, clarity and balance can follow." },
       { title: "Science-backed", body: "Traditional wisdom has its place, but every recommendation is considered through the lens of modern nutritional science and your individual needs." },
     ],
-    fnEyebrow: "Understanding the work",
+    fnEyebrow: "Understanding the process",
     fnTitle: "What is Functional Nutrition?",
-    fnBody: "Functional nutrition looks at food as medicine, not through restriction, but through understanding what your body needs to heal. It combines traditional food wisdom with modern science to address the root causes of digestive imbalance, low energy, and hormonal stress, personalised to you.",
+    fnBody: "Functional nutrition looks at food as a powerful foundation for wellbeing. Rather than focusing on restriction, it seeks to understand what your body needs to function at its best. By combining traditional food wisdom with modern nutrition science, it supports digestion, energy, hormonal balance and overall wellbeing through a personalised approach.",
     waysEyebrow: "Work with me",
     waysTitle: "Choose Your Journey",
     seeAll: "See all programmes",
@@ -149,6 +183,7 @@ export const en: Translations = {
   about: {
     eyebrow: "About me",
     title: "I'm Samantha",
+    subtitle: "Certified Nutritionist — trained in traditional and functional approaches to gut health",
     intro: "My journey into nutrition began long before Samskara, in Mediterranean kitchens, medical school, a decade in luxury retail, and the quiet wisdom of Kerala.",
     storyEyebrow: "The story",
     storyTitle: "From Sunday lunches to slow Kerala afternoons",
@@ -165,7 +200,7 @@ export const en: Translations = {
       {
         num: "02",
         title: "Understanding the body",
-        body: "Drawn to what the body carries and remembers, I studied medicine. A few years later I moved to London and stepped into luxury retail, a decade at Louis Vuitton, inside a world of extraordinary beauty and relentless pace.",
+        body: "Drawn to what the body carries and remembers, my early path took me through medical studies. A few years later I moved to London and stepped into luxury retail, a decade at Louis Vuitton, inside a world of extraordinary beauty and relentless pace.",
       },
       {
         num: "",
@@ -185,14 +220,14 @@ export const en: Translations = {
       },
       {
         num: "",
-        title: "Food was never the enemy. It's how you heal.",
+        title: "Food was never the enemy. It's how you feel nourished again.",
         body: "",
         pull: true,
       },
       {
         num: "05",
         title: "An unspoken language",
-        body: "It is a conversation between you and your body, and when you learn to listen, everything changes. That knowledge, woven with medicine and functional nutrition, became the foundation of Samskara.",
+        body: "It is a conversation between you and your body, and when you learn to listen, everything changes. That knowledge, woven with nutritional science and food tradition, became the foundation of Samskara.",
       },
       {
         num: "06",
@@ -300,7 +335,48 @@ export const en: Translations = {
     body: "Discovery calls are complimentary. When you are ready to begin, choose your programme above and book directly through Calendly. Payment is collected securely at booking.",
     calendlyNote: "",
     bookCta: "Book a discovery call",
-    payCta: "Reserve a programme",
+    payCta: "Book your Journey",
     secureNote: "Payments processed securely via Calendly.",
   },
+  bookingConsent: {
+    title: "Before you book",
+    intro: "Please confirm the following before continuing to Calendly. These consents are required for all discovery calls and paid programmes.",
+    serviceLabel:
+      "I wish the service to begin before the end of the 14-day cancellation period. I understand that if my consultation takes place within 14 days of booking, I will lose my statutory right to cancel once that session is complete, as set out in section 9.4 of the",
+    healthLabel:
+      "I consent to Samskara Nutrition collecting, storing and using my health information (including information I provide in my pre-consultation questionnaire) solely to provide my nutrition consultation and related recommendations, as described in the",
+    termsLink: "Terms of Service",
+    privacyLink: "Privacy Policy",
+    continue: "Continue to booking",
+    continueProgramme: "Book your Journey",
+  },
+  intake: {
+    eyebrow: "Pre-consultation",
+    title: "Health questionnaire",
+    intro:
+      "Please complete this secure form at least 48 hours before your first consultation. It helps me prepare thoughtfully for our time together.",
+    deadlineNote:
+      "Your appointment may be postponed if this questionnaire is not received at least 48 hours before your scheduled session.",
+    nameLabel: "Full name",
+    emailLabel: "Email address",
+    programmeLabel: "Programme booked",
+    programmeOptions: {
+      artha: "Artha",
+      setu: "Setu",
+      samskara: "Samskara",
+      discovery: "Discovery call only",
+    },
+    appointmentLabel: "First consultation date (if known)",
+    healthLabel: "Health summary — symptoms, concerns, and relevant history",
+    medicationsLabel: "Current medications and supplements (if any)",
+    goalsLabel: "What you hope to achieve from our work together",
+    submit: "Submit questionnaire",
+    submitting: "Sending…",
+    doneTitle: "Questionnaire received",
+    doneBody: "Thank you. Samantha will review your responses before your consultation. If anything changes, email hello@samskaranutrition.com.",
+    errorBody: "Something went wrong. Please try again or email hello@samskaranutrition.com with your answers.",
+    privacyNote: "Your responses are handled in line with our",
+    bookDiscovery: "Not booked yet? Schedule a discovery call",
+  },
+  pageMeta: pageMetaEn,
 } as const;

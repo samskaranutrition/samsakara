@@ -18,7 +18,7 @@ export const legalEn: LegalTranslations = {
   },
   privacy: {
     title: "Privacy Policy",
-    updated: "24 June 2026",
+    updated: "5 July 2026",
     intro:
       "Samskara Nutrition (“we”, “us”, “our”) respects your privacy. This policy explains how we collect, use, and protect personal data when you visit samskaranutrition.com or work with us online across the UK and Europe.",
     sections: [
@@ -33,8 +33,17 @@ export const legalEn: LegalTranslations = {
         heading: "What data we collect",
         paragraphs: [
           "Contact and booking data: name, email address, and any information you provide when joining the waitlist, emailing us, or booking via Calendly.",
+          "Health information: details about your health, symptoms, medical history and, where relevant, medication use, provided through your pre-consultation questionnaire and consultations (see Health Information below).",
           "Technical data: IP address, browser type, device information, and pages visited, collected through essential site operation and, with consent, third-party booking tools.",
           "Communication data: messages you send us and records of appointments or enquiries.",
+        ],
+      },
+      {
+        heading: "Health information",
+        paragraphs: [
+          "As part of your pre-consultation questionnaire and consultation, you will be asked to share information about your health, symptoms, medical history and, where relevant, medication use. This is \"special category data\" under UK GDPR Article 9.",
+          "By submitting your questionnaire and/or attending a consultation, you provide your explicit consent for us to collect, store and use this health information solely for the purpose of providing your nutrition consultation and any related recommendations. You may withdraw this consent at any time by contacting hello@samskaranutrition.com, though this may limit our ability to continue providing services to you.",
+          "This information will not be shared with third parties without your separate consent, except where required by law.",
         ],
       },
       {
@@ -98,7 +107,7 @@ export const legalEn: LegalTranslations = {
   },
   terms: {
     title: "Terms of Service",
-    updated: "24 June 2026",
+    updated: "5 July 2026",
     intro:
       "These terms govern your use of samskaranutrition.com and any discovery calls or programmes offered by Samskara Nutrition. By using this website, you agree to these terms.",
     sections: [
@@ -118,8 +127,8 @@ export const legalEn: LegalTranslations = {
       {
         heading: "Bookings and programmes",
         paragraphs: [
-          "Discovery calls and programmes are subject to availability. Specific fees, scope, and cancellation terms will be confirmed before you commit to paid work.",
-          "You agree to provide accurate information and to attend sessions on time or give reasonable notice if you need to reschedule, in line with any policy shared at booking.",
+          "Discovery calls and programmes are subject to availability. Fees and scope are confirmed at booking via Calendly.",
+          "You agree to provide accurate information and to attend sessions on time or give reasonable notice if you need to reschedule, in line with the cancellation and rescheduling terms in section 9 below.",
         ],
       },
       {
@@ -149,6 +158,18 @@ export const legalEn: LegalTranslations = {
         ],
       },
       {
+        heading: "9. Cancellations & refunds",
+        paragraphs: [
+          "9.1 Standard cancellation window — For all programmes, you may cancel your booking up to 48 hours before your scheduled appointment and receive a full refund.",
+          "9.2 Artha and Setu — If you cancel less than 48 hours before your appointment, no refund will be given. This reflects the time and preparation reserved exclusively for your session.",
+          "9.3 The Samskara Signature Journey (10-week programme) — Cancel up to 48 hours before your first consultation: full refund. Cancel within 48 hours after your first consultation: 50% refund of the total programme fee. Cancel beyond 48 hours after your first consultation: no refund. This reflects the personalised planning, resources and practitioner time allocated across the full 10-week programme from the outset.",
+          "9.4 Your statutory right to cancel (Consumer Contracts Regulations 2013) — Because you are booking as a consumer at a distance (online), you also have a statutory right to cancel your contract within 14 days of booking, without giving a reason, under the Consumer Contracts Regulations 2013.",
+          "However, if your appointment(s) are scheduled to take place within that 14-day period, we ask you to expressly confirm at the time of booking that you wish the service to begin before the 14-day period ends, and that you understand: (a) if we have fully performed the service (e.g. your consultation has taken place) before the 14 days are up, you lose your right to cancel under the CCR once that session is complete; and (b) if you cancel partway through (for example, partway through the Samskara programme) having given this consent, you may still be entitled to a pro-rata refund for sessions not yet delivered, calculated from the point you notify us, in addition to — not instead of — the refund terms set out in 9.1–9.3. Where our own cancellation policy is more generous to you than the statutory pro-rata calculation, the more generous term applies.",
+          "9.5 How to cancel — Cancellations must be made in writing (email) to hello@samskaranutrition.com. The cancellation is effective from the date and time we receive your notice, not the date you booked it.",
+          "9.6 Rescheduling and its effect on cancellation terms — You may reschedule your appointment, free of charge, provided you give at least 24 hours' notice of the change. Rescheduling does not reset your cancellation window. If you reschedule and then later cancel, the refund terms in 9.1–9.3 are calculated against your original appointment date, not the new one. If you need to reschedule for a genuine reason (illness, emergency) close to or after your original appointment date, contact us directly. These are considered at our discretion on a case-by-case basis, rather than through the standard refund policy. Requests to reschedule more than once or reschedule requests made after the original 24/48-hour window has already passed will be treated as a cancellation under 9.1–9.3.",
+        ],
+      },
+      {
         heading: "Contact",
         paragraphs: ["Questions about these terms: hello@samskaranutrition.com."],
       },
@@ -156,7 +177,7 @@ export const legalEn: LegalTranslations = {
   },
   cookies: {
     title: "Cookie Policy",
-    updated: "24 June 2026",
+    updated: "5 July 2026",
     intro:
       "This policy explains how Samskara Nutrition uses cookies and similar technologies on samskaranutrition.com, in line with UK PECR and GDPR requirements.",
     sections: [

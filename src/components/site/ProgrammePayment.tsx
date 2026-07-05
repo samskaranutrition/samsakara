@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
+import { ProgrammeBookLink } from "@/components/site/ProgrammeBookLink";
 import { programmePaymentUrl } from "@/lib/site";
 
 export function ProgrammePayment() {
@@ -32,11 +33,11 @@ export function ProgrammePayment() {
           <Link to="/programmes" hash="book" preload="intent" className="btn-primary">
             {pay.bookCta} <span className="cta-arrow ml-2">→</span>
           </Link>
-          {paymentUrl && (
-            <a href={paymentUrl} target="_blank" rel="noopener noreferrer" className="btn-outline">
+          {paymentUrl ? (
+            <ProgrammeBookLink programmeId="samskara" className="btn-outline">
               {pay.payCta} <span className="cta-arrow ml-2">→</span>
-            </a>
-          )}
+            </ProgrammeBookLink>
+          ) : null}
         </div>
         {pay.secureNote ? (
           <p className="mt-6 text-xs text-[color:var(--color-ink)]/55">{pay.secureNote}</p>

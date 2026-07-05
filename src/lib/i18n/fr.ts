@@ -1,8 +1,9 @@
 import type { Translations } from "./en";
-import { approachEn } from "./approach-en";
+import { approachFr } from "./approach-fr";
 import { faqFr } from "./faq-fr";
 import { legalFr } from "./legal-fr";
-import { programmesEn } from "./programmes-en";
+import { pageMetaFr } from "./page-meta-fr";
+import { programmesFr } from "./programmes-fr";
 
 export const fr: Translations = {
   nav: {
@@ -24,7 +25,7 @@ export const fr: Translations = {
     serving: "J'accompagne des client·es à travers le Royaume-Uni et l'Europe, en ligne.",
     explore: "Explorer",
     contactLabel: "Contact",
-    onlineNote: "En ligne · Royaume-Uni & Europe",
+    onlineNote: "Basée à Londres, accessible dans le monde entier",
     copyright: "© 2026 Samskara Nutrition · Réalisé avec soin",
     clinicHeading: "Notre cabinet à Londres",
     clinicHint: "",
@@ -33,7 +34,7 @@ export const fr: Translations = {
   closing: {
     eyebrow: "Une première conversation",
     title: "Vous avez du mal à décider ou à vous faire confiance ?",
-    body: "Votre intestin a peut-être perdu sa voix. J'aide à restaurer le lien entre l'intestin et l'esprit, pour que la clarté revienne, l'énergie se stabilise et que vous vous sentiez à nouveau en accord.",
+    body: "Votre intestin a peut-être perdu sa voix. Je vous aide à vous reconnecter à lui, pour que clarté, énergie et équilibre reviennent.",
     cta: "Trouver le bon chemin",
   },
   home: {
@@ -41,7 +42,7 @@ export const fr: Translations = {
     title: "Nutrition fonctionnelle axée sur la santé intestinale et le bien-être",
     body: "Soutenir la guérison intestinale, l'équilibre digestif et une vitalité durable par la nourriture plutôt que par la restriction.",
     explore: "Choisissez votre chemin",
-    quote: "Se soigner n'a pas à commencer par la restriction. Cela peut commencer par la nourriture.",
+    quote: "Le changement n'a pas à commencer par la restriction. Il peut commencer par la nourriture.",
     approachEyebrow: "Approche",
     approachTitle: "Choisissez une alimentation qui vous aime en retour",
     pillars: [
@@ -49,9 +50,9 @@ export const fr: Translations = {
       { title: "Axée sur l'intestin", body: "Nous commençons par l'intestin, en reconstruisant en douceur les fondations de la digestion, pour que l'énergie, la clarté et l'équilibre puissent suivre." },
       { title: "Appuyée par la science", body: "La sagesse traditionnelle a sa place, mais chaque recommandation est considérée à travers le prisme de la science nutritionnelle moderne et de vos besoins individuels." },
     ],
-    fnEyebrow: "Comprendre l'approche",
+    fnEyebrow: "Comprendre le processus",
     fnTitle: "Qu'est-ce que la nutrition fonctionnelle ?",
-    fnBody: "La nutrition fonctionnelle considère l'alimentation comme un médicament, non par la restriction, mais en comprenant ce dont votre corps a besoin pour guérir. Elle combine la sagesse alimentaire traditionnelle et la science moderne pour traiter les causes profondes du déséquilibre digestif, du manque d'énergie et du stress hormonal, de façon personnalisée.",
+    fnBody: "La nutrition fonctionnelle considère l'alimentation comme une base puissante du bien-être. Plutôt que la restriction, elle cherche à comprendre ce dont votre corps a besoin pour fonctionner au mieux. En combinant la sagesse alimentaire traditionnelle et la science nutritionnelle moderne, elle soutient la digestion, l'énergie, l'équilibre hormonal et le bien-être global, de façon personnalisée.",
     waysEyebrow: "Travailler avec moi",
     waysTitle: "Choisissez votre chemin",
     seeAll: "Voir tous les programmes",
@@ -66,6 +67,7 @@ export const fr: Translations = {
   about: {
     eyebrow: "À propos de moi",
     title: "Je suis Samantha",
+    subtitle: "Nutritionniste certifiée — formée aux approches traditionnelles et fonctionnelles de la santé intestinale",
     intro: "Mon chemin vers la nutrition a commencé bien avant Samskara, dans les cuisines méditerranéennes, la médecine, une décennie dans le luxe retail, et la sagesse tranquille du Kerala.",
     storyEyebrow: "Le récit",
     storyTitle: "Des déjeuners du dimanche aux après-midis lents du Kerala",
@@ -82,7 +84,7 @@ export const fr: Translations = {
       {
         num: "02",
         title: "Comprendre le corps",
-        body: "Attirée par ce que le corps porte et se souvient, j'ai étudié la médecine. Quelques années plus tard, j'ai rejoint Londres et le monde du luxe retail, une décennie chez Louis Vuitton, entre beauté extraordinaire et rythme implacable.",
+        body: "Attirée par ce que le corps porte et se souvient, mes premières études m'ont menée vers la médecine. Quelques années plus tard, j'ai rejoint Londres et le monde du luxe retail, une décennie chez Louis Vuitton, entre beauté extraordinaire et rythme implacable.",
       },
       {
         num: "",
@@ -102,14 +104,14 @@ export const fr: Translations = {
       },
       {
         num: "",
-        title: "La nourriture n'a jamais été l'ennemi. C'est ainsi que l'on guérit.",
+        title: "La nourriture n'a jamais été l'ennemi. C'est ainsi que l'on se sent à nouveau nourri·e.",
         body: "",
         pull: true,
       },
       {
         num: "05",
         title: "Une langue silencieuse",
-        body: "C'est une conversation entre vous et votre corps, et lorsque vous apprenez à l'écouter, tout change. Ce savoir, tissé avec la médecine et la nutrition fonctionnelle, est devenu la fondation de Samskara.",
+        body: "C'est une conversation entre vous et votre corps, et lorsque vous apprenez à l'écouter, tout change. Ce savoir, tissé avec la science nutritionnelle et la tradition alimentaire, est devenu la fondation de Samskara.",
       },
       {
         num: "06",
@@ -137,8 +139,9 @@ export const fr: Translations = {
       cta: "Trouver le bon chemin",
     },
   },
-  programmesPage: programmesEn,
-  approach: approachEn,
+  programmesPage: programmesFr,
+  approach: approachFr,
+  pageMeta: pageMetaFr,
   programmes: {
     eyebrow: "Travailler ensemble",
     title: "Choisissez votre chemin",
@@ -217,7 +220,47 @@ export const fr: Translations = {
     body: "Les appels découverte sont gratuits. Lorsque vous êtes prêt·e à commencer un programme, le paiement est collecté de façon sécurisée à la réservation.",
     calendlyNote: "Les disponibilités viennent toujours de Calendly, le site se met à jour automatiquement.",
     bookCta: "Réserver un appel découverte gratuit",
-    payCta: "Payer un programme",
+    payCta: "Réserver votre parcours",
     secureNote: "Paiements sécurisés via Stripe (Calendly ou lien de paiement).",
+  },
+  bookingConsent: {
+    title: "Avant de réserver",
+    intro: "Veuillez confirmer ce qui suit avant de continuer vers Calendly. Ces consentements sont requis pour les appels découverte et les programmes payants.",
+    serviceLabel:
+      "Je souhaite que le service commence avant la fin du délai d'annulation de 14 jours. Je comprends que si ma consultation a lieu dans les 14 jours suivant la réservation, je perds mon droit statutaire d'annulation une fois la séance terminée, conformément à la section 9.4 des",
+    healthLabel:
+      "Je consens à ce que Samskara Nutrition collecte, stocke et utilise mes informations de santé (y compris celles fournies dans mon questionnaire pré-consultation) uniquement pour fournir ma consultation nutritionnelle et les recommandations associées, comme décrit dans la",
+    termsLink: "Conditions d'utilisation",
+    privacyLink: "Politique de confidentialité",
+    continue: "Continuer vers la réservation",
+    continueProgramme: "Réserver votre parcours",
+  },
+  intake: {
+    eyebrow: "Pré-consultation",
+    title: "Questionnaire de santé",
+    intro:
+      "Merci de compléter ce formulaire sécurisé au moins 48 heures avant votre première consultation. Il m'aide à préparer notre temps ensemble.",
+    deadlineNote:
+      "Votre rendez-vous peut être reporté si ce questionnaire n'est pas reçu au moins 48 heures avant la séance prévue.",
+    nameLabel: "Nom complet",
+    emailLabel: "Adresse e-mail",
+    programmeLabel: "Programme réservé",
+    programmeOptions: {
+      artha: "Artha",
+      setu: "Setu",
+      samskara: "Samskara",
+      discovery: "Appel découverte uniquement",
+    },
+    appointmentLabel: "Date de la première consultation (si connue)",
+    healthLabel: "Résumé de santé — symptômes, préoccupations et antécédents pertinents",
+    medicationsLabel: "Médicaments et compléments actuels (le cas échéant)",
+    goalsLabel: "Ce que vous espérez de notre accompagnement",
+    submit: "Envoyer le questionnaire",
+    submitting: "Envoi…",
+    doneTitle: "Questionnaire reçu",
+    doneBody: "Merci. Samantha examinera vos réponses avant votre consultation. En cas de changement, écrivez à hello@samskaranutrition.com.",
+    errorBody: "Une erreur s'est produite. Réessayez ou envoyez vos réponses à hello@samskaranutrition.com.",
+    privacyNote: "Vos réponses sont traitées conformément à notre",
+    bookDiscovery: "Pas encore réservé ? Planifier un appel découverte",
   },
 };

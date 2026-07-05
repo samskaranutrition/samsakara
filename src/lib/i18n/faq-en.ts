@@ -16,7 +16,7 @@ export const faqEn: FaqTranslations = {
       question: "Who do you work with?",
       paragraphs: [
         "I work with adults and teenagers seeking personalised nutrition and lifestyle support to improve their health and wellbeing.",
-        "Whether you're looking to address digestive concerns such as bloating, IBS, reflux or constipation, improve your energy, support hormonal balance, manage stress, or simply build healthier habits, every consultation is tailored to your individual needs and goals.",
+        "Whether you're looking to address digestive concerns such as bloating, IBS, reflux or constipation, improve your energy, support hormonal balance or PCOS/PMOS, explore weight management, manage stress, or simply build healthier habits, every consultation is tailored to your individual needs and goals.",
       ],
     },
     {
@@ -99,6 +99,7 @@ export const faqEn: FaqTranslations = {
       heading: "5. Health Questionnaire",
       paragraphs: [
         "Your health questionnaire must be completed and returned at least 48 hours before your consultation.",
+        "Submit the secure form at samskaranutrition.com/intake after booking.",
         "This allows adequate time to review your health history and prepare personalised recommendations.",
         "Failure to submit the questionnaire on time may result in your appointment being postponed.",
       ],

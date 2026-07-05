@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { ApproachSections } from "@/components/site/ApproachContent";
 import { SiteLayout } from "@/components/site/Layout";
+import { usePageMeta } from "@/hooks/usePageMeta";
 import { photos } from "@/lib/photos";
 import { absoluteUrl } from "@/lib/site";
 
@@ -11,7 +12,7 @@ export const Route = createFileRoute("/approach")({
       { title: "The Approach | Samskara Nutrition" },
       {
         name: "description",
-        content: "Functional nutrition focused on gut health. Personalised support for digestion, hormones, energy, and lasting wellbeing.",
+        content: "Functional nutrition for gut health, PCOS/PMOS, weight management, hormones, and energy. Personalised support across the UK and Europe.",
       },
       { property: "og:title", content: "The Approach | Samskara Nutrition" },
       { property: "og:image", content: absoluteUrl(photos.approachGut.src) },
@@ -23,6 +24,7 @@ export const Route = createFileRoute("/approach")({
 });
 
 function ApproachPage() {
+  usePageMeta("approach");
   const { t } = useTranslation();
 
   return (

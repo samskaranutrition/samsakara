@@ -5,7 +5,7 @@ export const SITE_URL = "https://samskaranutrition.com";
 export const SITE_NAME = "Samskara Nutrition";
 
 export const SITE_DESCRIPTION =
-  "Functional nutrition coaching across the UK and Europe. Rebuild gut health and wellbeing through real food, with Samantha at Samskara Nutrition.";
+  "Functional nutrition coaching for gut health, PCOS/PMOS, weight management, and hormonal balance across the UK and Europe. Real food, personalised support with Samantha at Samskara Nutrition.";
 
 /** Calendly scheduling page — override with VITE_CALENDLY_URL if needed */
 export const CALENDLY_URL =
