@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import { BlurImage } from "@/components/site/BlurImage";
 import { useReveal } from "@/hooks/useReveal";
+import { submitNetlifyForm } from "@/lib/netlify-form";
 import { photos } from "@/lib/photos";
 
 export function AboutSamskaraMeaning() {
@@ -94,13 +95,8 @@ function MailingListForm({ copy }: { copy: MailingCopy }) {
     if (state === "submitting") return;
     setState("submitting");
     const form = e.currentTarget;
-    const data = new FormData(form);
     try {
-      await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(data as any).toString(),
-      });
+      await submitNetlifyForm(form);
       setState("done");
       form.reset();
     } catch {
@@ -121,6 +117,7 @@ function MailingListForm({ copy }: { copy: MailingCopy }) {
     <form
       name="mailing-list"
       method="POST"
+      action="/mailing-list.html"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       onSubmit={onSubmit}

@@ -2,17 +2,11 @@
 <html lang="en-GB">
   <head>
     <meta charset="UTF-8" />
-    <title>Netlify form registration</title>
+    <title>Health questionnaire registration</title>
   </head>
   <body>
-    <!-- Static copies for Netlify build-time form detection (SSR apps). Not linked in nav. -->
-    <form name="mailing-list" netlify netlify-honeypot="bot-field" hidden>
-      <input type="hidden" name="form-name" value="mailing-list" />
-      <input type="email" name="email" />
-      <input type="checkbox" name="consent" value="yes" />
-      <input name="bot-field" />
-    </form>
-    <form name="health-intake" netlify netlify-honeypot="bot-field" hidden>
+    <!-- Static form for Netlify build-time detection (TanStack Start SSR). -->
+    <form name="health-intake" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
       <input type="hidden" name="form-name" value="health-intake" />
       <input type="text" name="full_name" />
       <input type="email" name="email" />

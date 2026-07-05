@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { BookingConsentFields } from "@/components/site/BookingConsentFields";
+import { submitNetlifyForm } from "@/lib/netlify-form";
 
 type FormState = "idle" | "submitting" | "done" | "error";
 
@@ -32,15 +33,9 @@ export function HealthIntakeForm() {
     if (!(serviceChecked && healthChecked)) return;
     setState("submitting");
     const form = e.currentTarget;
-    const body = new URLSearchParams(new FormData(form) as any).toString();
 
     try {
-      const res = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body,
-      });
-      if (!res.ok) throw new Error("submit failed");
+      await submitNetlifyForm(form);
       setState("done");
       form.reset();
       setServiceChecked(false);
@@ -63,6 +58,7 @@ export function HealthIntakeForm() {
     <form
       name="health-intake"
       method="POST"
+      action="/health-intake.html"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       onSubmit={onSubmit}
