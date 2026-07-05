@@ -3,6 +3,9 @@
   publish = "dist/client"
   functions = ".netlify/v1/functions"
 
+# Netlify scans static HTML in the publish directory at deploy time for <form netlify>.
+# TanStack Start is SSR — forms in index.html are not published; see public/netlify-forms.html.
+
 [build.environment]
   NODE_VERSION = "20"
 

@@ -1698,8 +1698,8 @@
   flex-shrink: 0;
 }
 .programme-glyph--lotus {
-  width: calc(var(--well-size) * 0.72);
-  height: calc(var(--well-size) * 0.72);
+  width: calc(var(--well-size) * 0.62);
+  height: calc(var(--well-size) * 0.62);
 }
 .programme-glyph--bridge {
   width: calc(var(--well-size) * 0.88);

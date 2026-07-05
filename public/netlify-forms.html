@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Netlify form registration</title>
+  </head>
+  <body>
+    <!-- Static copies for Netlify build-time form detection (SSR apps). Not linked in nav. -->
+    <form name="mailing-list" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="mailing-list" />
+      <input type="email" name="email" />
+      <input type="checkbox" name="consent" value="yes" />
+      <input name="bot-field" />
+    </form>
+    <form name="health-intake" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="health-intake" />
+      <input type="text" name="full_name" />
+      <input type="email" name="email" />
+      <input type="text" name="programme" />
+      <input type="date" name="appointment_date" />
+      <textarea name="health_summary"></textarea>
+      <textarea name="medications"></textarea>
+      <textarea name="goals"></textarea>
+      <input type="checkbox" name="service_consent" value="yes" />
+      <input type="checkbox" name="health_consent" value="yes" />
+      <input name="bot-field" />
+    </form>
+  </body>
+</html>
