@@ -2224,28 +2224,56 @@ a:hover > .cta-arrow { transform: translateX(4px); }
 .booking-consent-modal {
   position: fixed;
   inset: 0;
-  z-index: 120;
+  z-index: 500;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 1.25rem;
+  pointer-events: none;
 }
 .booking-consent-modal-backdrop {
-  position: absolute;
+  position: fixed;
   inset: 0;
-  background: color-mix(in oklab, var(--color-ink) 45%, transparent);
+  z-index: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  pointer-events: auto;
+  background: color-mix(in oklab, var(--color-ink) 55%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .booking-consent-modal-panel {
   position: relative;
   z-index: 1;
-  width: min(100%, 32rem);
-  max-height: min(90vh, 720px);
+  width: min(100%, 42rem);
+  max-height: min(92vh, 820px);
   overflow-y: auto;
-  border-radius: 0.5rem;
-  border: 1px solid color-mix(in oklab, var(--color-gold) 50%, transparent);
+  pointer-events: auto;
+  border-radius: 0.55rem;
+  border: 1px solid color-mix(in oklab, var(--color-gold) 55%, transparent);
   background: var(--color-cream);
-  padding: 1.5rem;
-  box-shadow: 0 18px 48px color-mix(in oklab, var(--color-ink) 18%, transparent);
+  padding: clamp(1.35rem, 3vw, 2rem);
+  box-shadow:
+    0 24px 64px color-mix(in oklab, var(--color-ink) 22%, transparent),
+    0 0 0 1px color-mix(in oklab, var(--color-cream) 40%, transparent);
+}
+.booking-consent-modal-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.5vw, 1.65rem);
+  line-height: 1.25;
+  color: var(--color-forest);
+}
+.booking-consent-modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+.booking-consent-modal-panel .booking-consent-fields {
+  margin-top: 1.25rem;
 }
 .programme-overview-intake-note {
   margin-top: 0.75rem;

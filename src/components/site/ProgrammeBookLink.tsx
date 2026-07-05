@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { BookingConsentFields } from "@/components/site/BookingConsentFields";
+import { BookingConsentModal } from "@/components/site/BookingConsentModal";
 import { useBookingConsent } from "@/hooks/useBookingConsent";
 import { programmeBookingUrl } from "@/lib/site";
 
@@ -41,41 +42,35 @@ export function ProgrammeBookLink({ programmeId, className = "", children }: Pro
       <button type="button" className={className} onClick={() => setOpen(true)}>
         {children}
       </button>
-      {open ? (
-        <div
-          className="booking-consent-modal"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="programme-book-consent-title"
-        >
-          <div className="booking-consent-modal-backdrop" onClick={() => setOpen(false)} aria-hidden />
-          <div className="booking-consent-modal-panel">
-            <p id="programme-book-consent-title" className="font-serif text-xl text-[color:var(--color-forest)]">
-              {copy.title}
-            </p>
-            <BookingConsentFields
-              idPrefix={`programme-${programmeId}`}
-              serviceChecked={serviceChecked}
-              healthChecked={healthChecked}
-              onServiceChange={setServiceChecked}
-              onHealthChange={setHealthChecked}
-            />
-            <div className="mt-6 flex flex-wrap gap-3">
-              <button
-                type="button"
-                className="btn-primary"
-                disabled={!(serviceChecked && healthChecked)}
-                onClick={proceed}
-              >
-                {copy.continueProgramme}
-              </button>
-              <button type="button" className="btn-outline" onClick={() => setOpen(false)}>
-                {t("nav.close")}
-              </button>
-            </div>
-          </div>
+      <BookingConsentModal
+        open={open}
+        onClose={() => setOpen(false)}
+        titleId="programme-book-consent-title"
+      >
+        <p id="programme-book-consent-title" className="booking-consent-modal-title">
+          {copy.title}
+        </p>
+        <BookingConsentFields
+          idPrefix={`programme-${programmeId}`}
+          serviceChecked={serviceChecked}
+          healthChecked={healthChecked}
+          onServiceChange={setServiceChecked}
+          onHealthChange={setHealthChecked}
+        />
+        <div className="booking-consent-modal-actions">
+          <button
+            type="button"
+            className="btn-primary"
+            disabled={!(serviceChecked && healthChecked)}
+            onClick={proceed}
+          >
+            {copy.continueProgramme}
+          </button>
+          <button type="button" className="btn-outline" onClick={() => setOpen(false)}>
+            {t("nav.close")}
+          </button>
         </div>
-      ) : null}
+      </BookingConsentModal>
     </>
   );
 }
