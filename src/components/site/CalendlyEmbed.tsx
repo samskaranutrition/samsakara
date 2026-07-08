@@ -1,8 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { BookingConsentGate } from "@/components/site/BookingConsentGate";
-import { useBookingConsent } from "@/hooks/useBookingConsent";
 import { useCookieConsent } from "@/hooks/useCookieConsent";
 import { writeCookieConsent } from "@/lib/cookie-consent";
 import { calendlyBookingUrl } from "@/lib/site";
@@ -62,12 +60,11 @@ export function CalendlyEmbed({ className = "" }: Props) {
     calendlyEnable: string;
   };
   const { functionalAllowed } = useCookieConsent();
-  const { granted: bookingConsentGranted } = useBookingConsent();
   const url = calendlyBookingUrl();
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!functionalAllowed || !bookingConsentGranted || !containerRef.current || !url) return;
+    if (!functionalAllowed || !containerRef.current || !url) return;
     let cancelled = false;
 
     loadCalendlyScript()
@@ -83,7 +80,7 @@ export function CalendlyEmbed({ className = "" }: Props) {
     return () => {
       cancelled = true;
     };
-  }, [url, functionalAllowed, bookingConsentGranted]);
+  }, [url, functionalAllowed]);
 
   if (!url) {
     return (
@@ -127,13 +124,11 @@ export function CalendlyEmbed({ className = "" }: Props) {
   }
 
   return (
-    <BookingConsentGate className={className}>
-      <div
-        ref={containerRef}
-        className={`calendly-inline-widget min-h-[700px] w-full overflow-hidden rounded border border-[color:var(--color-gold)]/40 bg-background ${className}`}
-        data-url={url}
-        style={{ minWidth: "320px", height: "700px" }}
-      />
-    </BookingConsentGate>
+    <div
+      ref={containerRef}
+      className={`calendly-inline-widget min-h-[700px] w-full overflow-hidden rounded border border-[color:var(--color-gold)]/40 bg-background ${className}`}
+      data-url={url}
+      style={{ minWidth: "320px", height: "700px" }}
+    />
   );
 }

@@ -38,11 +38,11 @@ export function BookingConsentFields({
           className="booking-consent-checkbox"
         />
         <span>
-          {copy.serviceLabel}{" "}
+          {copy.serviceLabel}
           <Link to="/terms" className="booking-consent-link">
             {copy.termsLink}
           </Link>
-          .
+          , section 9.4)
         </span>
       </label>
       <label className="booking-consent-field" htmlFor={`${idPrefix}-health`}>
@@ -57,11 +57,11 @@ export function BookingConsentFields({
           className="booking-consent-checkbox"
         />
         <span>
-          {copy.healthLabel}{" "}
+          {copy.healthLabel}
           <Link to="/privacy" className="booking-consent-link">
             {copy.privacyLink}
           </Link>
-          .
+          )
         </span>
       </label>
     </div>

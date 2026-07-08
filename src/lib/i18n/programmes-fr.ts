@@ -15,8 +15,6 @@ export const programmesFr: ProgrammesPageContent = {
     bookProgramme: "Réserver votre parcours",
     viewDetails: "Voir les détails",
     payNote: "La réservation et le paiement sont gérés en toute sécurité — vous recevrez une confirmation instantanée par e-mail.",
-    intakeLink: "Compléter votre questionnaire de santé",
-    intakeHint: "Après la réservation, merci d'envoyer votre formulaire pré-consultation au moins 48 heures avant votre première séance.",
   },
   items: [
     {

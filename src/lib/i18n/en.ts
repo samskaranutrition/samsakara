@@ -340,11 +340,11 @@ export const en: Translations = {
   },
   bookingConsent: {
     title: "Before you book",
-    intro: "Please confirm the following before continuing to Calendly. These consents are required for all discovery calls and paid programmes.",
+    intro: "Two quick things to confirm. These are required for all discovery calls and online programmes:",
     serviceLabel:
-      "I wish the service to begin before the end of the 14-day cancellation period. I understand that if my consultation takes place within 14 days of booking, I will lose my statutory right to cancel once that session is complete, as set out in section 9.4 of the",
+      "If the date I choose for my consultation falls within the standard 14-day cooling-off period, I'm requesting it go ahead as scheduled, and I understand I won't be able to cancel it for a refund under that right once it's taken place. (Full details: ",
     healthLabel:
-      "I consent to Samskara Nutrition collecting, storing and using my health information (including information I provide in my pre-consultation questionnaire) solely to provide my nutrition consultation and related recommendations, as described in the",
+      "I'm happy for Samantha to use my health information — including anything I share in my pre-consultation questionnaire — to prepare for and deliver my consultation. (Full details: ",
     termsLink: "Terms of Service",
     privacyLink: "Privacy Policy",
     continue: "Continue to booking",

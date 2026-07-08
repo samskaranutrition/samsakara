@@ -1,12 +1,10 @@
-import { lazy, Suspense, type ReactNode } from "react";
+import { Suspense, type ReactNode } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { CookieConsent } from "./CookieConsent";
 import { RoutePrefetcher } from "./RoutePrefetcher";
 
-const ReadAloud = lazy(() =>
-  import("./ReadAloud").then((m) => ({ default: m.ReadAloud })),
-);
+
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   return (
@@ -16,9 +14,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <main className="route-transition flex-1">{children}</main>
       <Footer />
       <CookieConsent />
-      <Suspense fallback={null}>
-        <ReadAloud />
-      </Suspense>
+
     </div>
   );
 }

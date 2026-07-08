@@ -15,8 +15,6 @@ export const programmesEn: ProgrammesPageContent = {
     bookProgramme: "Book your Journey",
     viewDetails: "View details",
     payNote: "Booking and payment are handled securely — you'll receive instant confirmation by email.",
-    intakeLink: "Complete your health questionnaire",
-    intakeHint: "After booking, please submit your pre-consultation form at least 48 hours before your first session.",
   },
   items: [
     {
