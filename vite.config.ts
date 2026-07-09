@@ -6,6 +6,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { defineConfig, type Plugin } from "vite";
 
+import { cloudflare } from "@cloudflare/vite-plugin";
+
 /** Some SSR paths in dev still point at last build output under dist/client. */
 function serveDistAssetsInDev(): Plugin {
   return {
@@ -37,9 +39,13 @@ export default defineConfig({
     tanstackStart({
       server: { entry: "server" },
     }),
-    netlify(),
     viteReact(),
     tailwindcss(),
     serveDistAssetsInDev(),
+    cloudflare({
+      viteEnvironment: {
+        name: "ssr"
+      }
+    }),
   ],
 });
